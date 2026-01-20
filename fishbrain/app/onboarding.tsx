@@ -18,8 +18,7 @@ export default function OnboardingScreen() {
       <View style={styles.content}>
         <Text style={styles.title}>Choose Your Fish</Text>
         <Text style={styles.subtitle}>
-          Your fish will depend on you to survive!{'\n'}
-          Answer AI/ML questions correctly to keep it healthy.
+          Answer AI/ML questions correctly to keep your fish healthy and happy.
         </Text>
 
         <View style={styles.fishGrid}>
@@ -30,14 +29,12 @@ export default function OnboardingScreen() {
                 key={fishType}
                 style={({ pressed }) => [
                   styles.fishCard,
-                  { borderColor: config.color },
                   pressed && styles.fishCardPressed,
                 ]}
                 onPress={() => handleFishSelect(fishType)}
               >
                 <Text style={styles.fishEmoji}>{config.emoji}</Text>
                 <Text style={styles.fishName}>{config.name}</Text>
-                <Text style={styles.fishType}>{fishType}</Text>
               </Pressable>
             );
           })}
@@ -58,11 +55,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    fontSize: FONT_SIZE.title,
-    fontWeight: 'bold',
+    fontSize: FONT_SIZE.xxl,
+    fontWeight: '700',
     color: THEME.text,
     textAlign: 'center',
-    marginBottom: SPACING.md,
+    marginBottom: SPACING.sm,
   },
   subtitle: {
     fontSize: FONT_SIZE.md,
@@ -78,26 +75,20 @@ const styles = StyleSheet.create({
     backgroundColor: THEME.surface,
     borderRadius: RADIUS.lg,
     padding: SPACING.lg,
+    flexDirection: 'row',
     alignItems: 'center',
-    borderWidth: 2,
-    borderColor: THEME.surface,
+    gap: SPACING.md,
   },
   fishCardPressed: {
-    opacity: 0.8,
+    opacity: 0.7,
     transform: [{ scale: 0.98 }],
   },
   fishEmoji: {
-    fontSize: 64,
-    marginBottom: SPACING.sm,
+    fontSize: 48,
   },
   fishName: {
     fontSize: FONT_SIZE.xl,
-    fontWeight: 'bold',
+    fontWeight: '600',
     color: THEME.text,
-  },
-  fishType: {
-    fontSize: FONT_SIZE.sm,
-    color: THEME.textSecondary,
-    textTransform: 'capitalize',
   },
 });

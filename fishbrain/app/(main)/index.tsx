@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -28,26 +28,22 @@ export default function HomeScreen() {
   const { feedFish } = useGameActions();
   const { currentQuestion, selectNewQuestion, checkAnswer } = useQuestions();
 
-  // Animation states
   const [isDropping, setIsDropping] = useState(false);
   const [isEating, setIsEating] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [hasAnswered, setHasAnswered] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
 
-  // Initialize health decay tracking
   useHealthDecay();
 
   const fishConfig = state.fishType ? FISH_CONFIG[state.fishType] : null;
 
-  // Load initial question
   useEffect(() => {
     if (!currentQuestion) {
       selectNewQuestion();
     }
   }, []);
 
-  // Redirect to revival if dead
   useEffect(() => {
     if (isDead) {
       router.replace('/revival');
@@ -67,7 +63,6 @@ export default function HomeScreen() {
     setHasAnswered(true);
 
     if (correct) {
-      // Trigger food drop animation
       await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
       setIsDropping(true);
     } else {
@@ -76,28 +71,23 @@ export default function HomeScreen() {
   };
 
   const handleFoodEaten = () => {
-    // Food animation complete, trigger eating animation
     setIsDropping(false);
     setIsEating(true);
 
-    // Update game state after eating animation
     if (currentQuestion) {
       feedFish(currentQuestion.id, true);
     }
 
-    // Reset eating state after animation
     setTimeout(() => {
       setIsEating(false);
     }, 1500);
   };
 
   const handleNextQuestion = () => {
-    // Reset states and load next question
     setSelectedOption(null);
     setHasAnswered(false);
     setIsCorrect(false);
 
-    // If wrong answer, update game state now
     if (!isCorrect && currentQuestion) {
       feedFish(currentQuestion.id, false);
     }
@@ -109,7 +99,7 @@ export default function HomeScreen() {
     return (
       <SafeAreaView style={styles.container}>
         <View style={styles.loadingContainer}>
-          <Text style={styles.loadingText}>Loading question...</Text>
+          <Text style={styles.loadingText}>Loading...</Text>
         </View>
       </SafeAreaView>
     );
@@ -128,13 +118,9 @@ export default function HomeScreen() {
         <StreakBadge streak={state.streak} />
       </View>
 
-      {/* Question Section - Top Half */}
+      {/* Question Section */}
       <View style={styles.questionSection}>
-        <View style={styles.questionHeader}>
-          <Text style={styles.category}>{currentQuestion.category}</Text>
-          <Text style={styles.difficulty}>{currentQuestion.difficulty}</Text>
-        </View>
-
+        <Text style={styles.category}>{currentQuestion.category}</Text>
         <QuestionCard question={currentQuestion.question} />
 
         <ScrollView
@@ -159,18 +145,16 @@ export default function HomeScreen() {
           ))}
         </ScrollView>
 
-        {/* Submit / Next Button */}
         <View style={styles.buttonContainer}>
           {!hasAnswered ? (
             <Button
-              title="Submit Answer"
+              title="Submit"
               onPress={handleSubmit}
               disabled={!selectedOption}
-              variant={healthState === 'critical' ? 'danger' : 'primary'}
             />
           ) : (
             <Button
-              title={isCorrect ? 'Next Question' : 'Try Another'}
+              title="Next"
               onPress={handleNextQuestion}
               variant={isCorrect ? 'success' : 'primary'}
               disabled={isDropping || isEating}
@@ -179,7 +163,7 @@ export default function HomeScreen() {
         </View>
       </View>
 
-      {/* Fish Tank Section - Bottom Half */}
+      {/* Fish Tank */}
       <View style={styles.tankSection}>
         <HealthBar health={state.health} />
         <View style={styles.tankWrapper}>
@@ -193,15 +177,6 @@ export default function HomeScreen() {
           </FishTank>
         </View>
       </View>
-
-      {/* Feedback overlay - only show for correct answers */}
-      {hasAnswered && isCorrect && !isDropping && !isEating && (
-        <View style={styles.feedbackOverlay} pointerEvents="none">
-          <Text style={[styles.feedbackText, styles.correctText]}>
-            Correct! Feeding time!
-          </Text>
-        </View>
-      )}
     </SafeAreaView>
   );
 }
@@ -224,12 +199,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: SPACING.md,
+    paddingHorizontal: SPACING.lg,
     paddingVertical: SPACING.sm,
   },
   fishName: {
-    fontSize: FONT_SIZE.lg,
-    fontWeight: 'bold',
+    fontSize: FONT_SIZE.xl,
+    fontWeight: '700',
     color: THEME.text,
   },
   statsText: {
@@ -238,65 +213,31 @@ const styles = StyleSheet.create({
   },
   questionSection: {
     flex: 1,
-    paddingHorizontal: SPACING.md,
-  },
-  questionHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: SPACING.sm,
+    paddingHorizontal: SPACING.lg,
   },
   category: {
     fontSize: FONT_SIZE.sm,
     color: THEME.primary,
     fontWeight: '600',
-  },
-  difficulty: {
-    fontSize: FONT_SIZE.xs,
-    color: THEME.textMuted,
-    textTransform: 'uppercase',
+    marginBottom: SPACING.xs,
   },
   optionsScroll: {
     flex: 1,
-    marginTop: SPACING.sm,
   },
   optionsContainer: {
-    gap: SPACING.xs,
+    gap: SPACING.sm,
     paddingBottom: SPACING.sm,
   },
   buttonContainer: {
     paddingVertical: SPACING.sm,
   },
   tankSection: {
-    height: 220,
-    paddingHorizontal: SPACING.md,
-    paddingBottom: SPACING.sm,
+    height: 200,
+    paddingHorizontal: SPACING.lg,
+    paddingBottom: SPACING.md,
   },
   tankWrapper: {
     flex: 1,
-    marginTop: SPACING.xs,
-  },
-  feedbackOverlay: {
-    position: 'absolute',
-    top: '40%',
-    left: 0,
-    right: 0,
-    alignItems: 'center',
-  },
-  feedbackText: {
-    fontSize: FONT_SIZE.xl,
-    fontWeight: 'bold',
-    paddingHorizontal: SPACING.lg,
-    paddingVertical: SPACING.sm,
-    borderRadius: RADIUS.md,
-    overflow: 'hidden',
-  },
-  correctText: {
-    color: THEME.success,
-    backgroundColor: 'rgba(46, 204, 113, 0.2)',
-  },
-  wrongText: {
-    color: THEME.warning,
-    backgroundColor: 'rgba(255, 217, 61, 0.2)',
+    marginTop: SPACING.sm,
   },
 });

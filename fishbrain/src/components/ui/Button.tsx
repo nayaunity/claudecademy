@@ -17,7 +17,7 @@ export function Button({
   style,
 }: ButtonProps) {
   const getBackgroundColor = () => {
-    if (disabled) return THEME.surface;
+    if (disabled) return THEME.surfaceLight;
     switch (variant) {
       case 'primary':
         return THEME.primary;
@@ -38,7 +38,7 @@ export function Button({
       case 'secondary':
         return THEME.text;
       default:
-        return '#ffffff';
+        return '#FFFFFF';
     }
   };
 
@@ -48,10 +48,9 @@ export function Button({
         styles.button,
         {
           backgroundColor: getBackgroundColor(),
-          opacity: pressed ? 0.8 : 1,
+          opacity: pressed ? 0.9 : 1,
           transform: [{ scale: pressed ? 0.98 : 1 }],
         },
-        variant === 'secondary' && styles.secondaryButton,
         style,
       ]}
       onPress={onPress}
@@ -70,12 +69,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  secondaryButton: {
-    borderWidth: 2,
-    borderColor: THEME.primary,
-  },
   text: {
-    fontSize: FONT_SIZE.lg,
-    fontWeight: 'bold',
+    fontSize: FONT_SIZE.md,
+    fontWeight: '600',
   },
 });

@@ -22,15 +22,13 @@ export function AnswerOption({
   const getBackgroundColor = () => {
     if (isCorrect) return THEME.success;
     if (isWrong) return THEME.error;
-    if (isSelected) return THEME.surfaceLight;
+    if (isSelected) return THEME.primary;
     return THEME.surface;
   };
 
-  const getBorderColor = () => {
-    if (isCorrect) return THEME.success;
-    if (isWrong) return THEME.error;
-    if (isSelected) return THEME.primary;
-    return 'transparent';
+  const getTextColor = () => {
+    if (isCorrect || isWrong || isSelected) return '#FFFFFF';
+    return THEME.text;
   };
 
   return (
@@ -39,7 +37,6 @@ export function AnswerOption({
         styles.container,
         {
           backgroundColor: getBackgroundColor(),
-          borderColor: getBorderColor(),
           opacity: disabled && !isSelected && !isCorrect ? 0.5 : 1,
           transform: [{ scale: pressed && !disabled ? 0.98 : 1 }],
         },
@@ -48,12 +45,7 @@ export function AnswerOption({
       disabled={disabled}
     >
       <View style={styles.content}>
-        <Text
-          style={[
-            styles.optionText,
-            (isCorrect || isWrong) && styles.answeredText,
-          ]}
-        >
+        <Text style={[styles.optionText, { color: getTextColor() }]}>
           {option.text}
         </Text>
         {isCorrect && <Text style={styles.indicator}>✓</Text>}
@@ -67,7 +59,6 @@ const styles = StyleSheet.create({
   container: {
     borderRadius: RADIUS.md,
     padding: SPACING.md,
-    borderWidth: 2,
   },
   content: {
     flexDirection: 'row',
@@ -76,17 +67,12 @@ const styles = StyleSheet.create({
   },
   optionText: {
     fontSize: FONT_SIZE.md,
-    color: THEME.text,
     flex: 1,
     paddingRight: SPACING.sm,
-  },
-  answeredText: {
-    color: '#ffffff',
-    fontWeight: '600',
   },
   indicator: {
     fontSize: FONT_SIZE.lg,
     fontWeight: 'bold',
-    color: '#ffffff',
+    color: '#FFFFFF',
   },
 });

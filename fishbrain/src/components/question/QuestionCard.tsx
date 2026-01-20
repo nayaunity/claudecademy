@@ -15,15 +15,12 @@ export function QuestionCard({ question }: QuestionCardProps) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: THEME.surface,
-    borderRadius: RADIUS.lg,
-    padding: SPACING.lg,
-    borderLeftWidth: 4,
-    borderLeftColor: THEME.primary,
+    paddingVertical: SPACING.sm,
   },
   questionText: {
     fontSize: FONT_SIZE.lg,
     color: THEME.text,
     lineHeight: 28,
+    fontWeight: '500',
   },
 });

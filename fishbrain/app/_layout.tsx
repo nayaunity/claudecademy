@@ -6,7 +6,7 @@ import { THEME } from '../src/constants/theme';
 export default function RootLayout() {
   return (
     <GameProvider>
-      <StatusBar style="light" />
+      <StatusBar style="dark" />
       <Stack
         screenOptions={{
           headerShown: false,

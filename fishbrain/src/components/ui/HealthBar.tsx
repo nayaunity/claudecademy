@@ -10,7 +10,6 @@ export function HealthBar({ health }: HealthBarProps) {
   const widthAnim = useRef(new Animated.Value(health)).current;
   const color = getHealthColor(health);
 
-  // Animate width changes
   useEffect(() => {
     Animated.timing(widthAnim, {
       toValue: health,
@@ -19,7 +18,6 @@ export function HealthBar({ health }: HealthBarProps) {
     }).start();
   }, [health, widthAnim]);
 
-  // Interpolate width percentage
   const widthInterpolate = widthAnim.interpolate({
     inputRange: [0, 100],
     outputRange: ['0%', '100%'],
@@ -60,14 +58,14 @@ const styles = StyleSheet.create({
   label: {
     fontSize: FONT_SIZE.sm,
     color: THEME.textSecondary,
-    fontWeight: '600',
+    fontWeight: '500',
   },
   percentage: {
-    fontSize: FONT_SIZE.md,
-    fontWeight: 'bold',
+    fontSize: FONT_SIZE.sm,
+    fontWeight: '600',
   },
   barBackground: {
-    height: 12,
+    height: 8,
     backgroundColor: THEME.surface,
     borderRadius: RADIUS.sm,
     overflow: 'hidden',

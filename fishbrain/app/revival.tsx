@@ -28,38 +28,32 @@ export default function RevivalScreen() {
           <Text style={styles.deadFishEmoji}>
             {fishConfig?.emoji || '🐠'}
           </Text>
-          <Text style={styles.deadIndicator}>x_x</Text>
         </View>
 
         <Text style={styles.title}>Oh no!</Text>
         <Text style={styles.subtitle}>
-          {fishConfig?.name || 'Your fish'} has passed away...
+          {fishConfig?.name || 'Your fish'} didn't make it...
         </Text>
 
         <View style={styles.statsCard}>
-          <Text style={styles.statsTitle}>Final Stats</Text>
           <View style={styles.statsRow}>
-            <Text style={styles.statsLabel}>Questions Answered:</Text>
+            <Text style={styles.statsLabel}>Questions</Text>
             <Text style={styles.statsValue}>{state.totalAnswered}</Text>
           </View>
           <View style={styles.statsRow}>
-            <Text style={styles.statsLabel}>Correct Answers:</Text>
+            <Text style={styles.statsLabel}>Correct</Text>
             <Text style={styles.statsValue}>{state.totalCorrect}</Text>
-          </View>
-          <View style={styles.statsRow}>
-            <Text style={styles.statsLabel}>Best Streak:</Text>
-            <Text style={styles.statsValue}>{state.streak}</Text>
           </View>
         </View>
 
         <View style={styles.buttonContainer}>
           <Button
-            title="Revive Fish (50% Health)"
+            title="Try Again"
             onPress={handleRevive}
             variant="primary"
           />
           <Button
-            title="Choose New Fish"
+            title="New Fish"
             onPress={handleNewFish}
             variant="secondary"
           />
@@ -81,29 +75,21 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   fishContainer: {
-    position: 'relative',
     marginBottom: SPACING.lg,
   },
   deadFishEmoji: {
-    fontSize: 100,
-    opacity: 0.5,
+    fontSize: 80,
+    opacity: 0.4,
     transform: [{ rotate: '180deg' }],
   },
-  deadIndicator: {
-    position: 'absolute',
-    bottom: 10,
-    right: -10,
-    fontSize: FONT_SIZE.xl,
-    color: THEME.danger,
-  },
   title: {
-    fontSize: FONT_SIZE.title,
-    fontWeight: 'bold',
-    color: THEME.danger,
-    marginBottom: SPACING.sm,
+    fontSize: FONT_SIZE.xxl,
+    fontWeight: '700',
+    color: THEME.text,
+    marginBottom: SPACING.xs,
   },
   subtitle: {
-    fontSize: FONT_SIZE.lg,
+    fontSize: FONT_SIZE.md,
     color: THEME.textSecondary,
     textAlign: 'center',
     marginBottom: SPACING.xl,
@@ -114,18 +100,11 @@ const styles = StyleSheet.create({
     padding: SPACING.lg,
     width: '100%',
     marginBottom: SPACING.xl,
-  },
-  statsTitle: {
-    fontSize: FONT_SIZE.lg,
-    fontWeight: 'bold',
-    color: THEME.text,
-    marginBottom: SPACING.md,
-    textAlign: 'center',
+    gap: SPACING.sm,
   },
   statsRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: SPACING.sm,
   },
   statsLabel: {
     fontSize: FONT_SIZE.md,
@@ -133,11 +112,11 @@ const styles = StyleSheet.create({
   },
   statsValue: {
     fontSize: FONT_SIZE.md,
-    fontWeight: 'bold',
+    fontWeight: '600',
     color: THEME.text,
   },
   buttonContainer: {
     width: '100%',
-    gap: SPACING.md,
+    gap: SPACING.sm,
   },
 });
