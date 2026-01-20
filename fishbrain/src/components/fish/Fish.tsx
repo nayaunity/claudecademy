@@ -6,27 +6,119 @@ import { FISH_CONFIG } from '../../constants/fish';
 interface FishProps {
   fishType: FishType;
   healthState: HealthState;
+  isEating?: boolean;
 }
 
-export function Fish({ fishType, healthState }: FishProps) {
+export function Fish({ fishType, healthState, isEating = false }: FishProps) {
   const config = FISH_CONFIG[fishType];
 
   // Animation values
   const swimX = useRef(new Animated.Value(0)).current;
   const swimY = useRef(new Animated.Value(0)).current;
   const scale = useRef(new Animated.Value(1)).current;
+  const rotation = useRef(new Animated.Value(0)).current;
+
+  // Eating animation - fish swims up to catch food
+  useEffect(() => {
+    if (isEating && healthState !== 'dead') {
+      // Stop current animations and swim up to eat
+      swimX.stopAnimation();
+      swimY.stopAnimation();
+
+      Animated.sequence([
+        // Swim up eagerly
+        Animated.parallel([
+          Animated.timing(swimY, {
+            toValue: -50,
+            duration: 400,
+            useNativeDriver: true,
+          }),
+          Animated.timing(scale, {
+            toValue: 1.15,
+            duration: 400,
+            useNativeDriver: true,
+          }),
+        ]),
+        // Chomp animation (quick scale pulses)
+        Animated.sequence([
+          Animated.timing(scale, {
+            toValue: 1.25,
+            duration: 100,
+            useNativeDriver: true,
+          }),
+          Animated.timing(scale, {
+            toValue: 1.1,
+            duration: 100,
+            useNativeDriver: true,
+          }),
+          Animated.timing(scale, {
+            toValue: 1.25,
+            duration: 100,
+            useNativeDriver: true,
+          }),
+          Animated.timing(scale, {
+            toValue: 1.1,
+            duration: 100,
+            useNativeDriver: true,
+          }),
+        ]),
+        // Happy wiggle and return
+        Animated.parallel([
+          Animated.sequence([
+            Animated.timing(rotation, {
+              toValue: 0.1,
+              duration: 100,
+              useNativeDriver: true,
+            }),
+            Animated.timing(rotation, {
+              toValue: -0.1,
+              duration: 100,
+              useNativeDriver: true,
+            }),
+            Animated.timing(rotation, {
+              toValue: 0.1,
+              duration: 100,
+              useNativeDriver: true,
+            }),
+            Animated.timing(rotation, {
+              toValue: 0,
+              duration: 100,
+              useNativeDriver: true,
+            }),
+          ]),
+          Animated.timing(swimY, {
+            toValue: 0,
+            duration: 500,
+            useNativeDriver: true,
+          }),
+          Animated.timing(scale, {
+            toValue: 1,
+            duration: 500,
+            useNativeDriver: true,
+          }),
+        ]),
+      ]).start();
+    }
+  }, [isEating]);
 
   // Swimming animation based on health state
   useEffect(() => {
     if (healthState === 'dead') {
       // Dead fish floats to top, upside down
       Animated.timing(swimY, {
-        toValue: -100,
+        toValue: -80,
+        duration: 2000,
+        useNativeDriver: true,
+      }).start();
+      Animated.timing(rotation, {
+        toValue: Math.PI,
         duration: 2000,
         useNativeDriver: true,
       }).start();
       return;
     }
+
+    if (isEating) return; // Don't override eating animation
 
     // Swimming speed based on health
     const swimSpeed = healthState === 'thriving' ? 2000 : healthState === 'hungry' ? 3000 : 4000;
@@ -71,10 +163,12 @@ export function Fish({ fishType, healthState }: FishProps) {
       swimAnimation.stop();
       bobAnimation.stop();
     };
-  }, [healthState, swimX, swimY]);
+  }, [healthState, isEating, swimX, swimY]);
 
   // Scale pulse animation for thriving state
   useEffect(() => {
+    if (isEating || healthState === 'dead') return;
+
     if (healthState === 'thriving') {
       const pulseAnimation = Animated.loop(
         Animated.sequence([
@@ -95,7 +189,7 @@ export function Fish({ fishType, healthState }: FishProps) {
     } else {
       scale.setValue(healthState === 'critical' ? 0.9 : 1);
     }
-  }, [healthState, scale]);
+  }, [healthState, isEating, scale]);
 
   // Get fish opacity based on health
   const getOpacity = () => {
@@ -111,6 +205,11 @@ export function Fish({ fishType, healthState }: FishProps) {
     }
   };
 
+  const rotateInterpolate = rotation.interpolate({
+    inputRange: [-1, 0, 1, Math.PI],
+    outputRange: ['-30deg', '0deg', '30deg', '180deg'],
+  });
+
   return (
     <Animated.View
       style={[
@@ -120,7 +219,7 @@ export function Fish({ fishType, healthState }: FishProps) {
             { translateX: swimX },
             { translateY: swimY },
             { scale },
-            { rotate: healthState === 'dead' ? '180deg' : '0deg' },
+            { rotate: rotateInterpolate },
           ],
           opacity: getOpacity(),
         },
@@ -130,6 +229,11 @@ export function Fish({ fishType, healthState }: FishProps) {
       {healthState === 'critical' && (
         <View style={styles.statusIndicator}>
           <Text style={styles.statusText}>!</Text>
+        </View>
+      )}
+      {isEating && (
+        <View style={styles.happyIndicator}>
+          <Text style={styles.happyText}>+10</Text>
         </View>
       )}
     </Animated.View>
@@ -142,7 +246,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   emoji: {
-    fontSize: 80,
+    fontSize: 64,
   },
   statusIndicator: {
     position: 'absolute',
@@ -159,5 +263,19 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontWeight: 'bold',
     fontSize: 16,
+  },
+  happyIndicator: {
+    position: 'absolute',
+    top: -15,
+    right: -20,
+    backgroundColor: '#2ecc71',
+    borderRadius: 10,
+    paddingHorizontal: 8,
+    paddingVertical: 2,
+  },
+  happyText: {
+    color: '#ffffff',
+    fontWeight: 'bold',
+    fontSize: 14,
   },
 });

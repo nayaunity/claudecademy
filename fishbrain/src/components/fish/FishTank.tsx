@@ -1,5 +1,5 @@
 import { useEffect, useRef, ReactNode } from 'react';
-import { View, StyleSheet, Animated, Dimensions } from 'react-native';
+import { View, StyleSheet, Animated } from 'react-native';
 import { THEME, RADIUS } from '../../constants/theme';
 
 interface FishTankProps {
@@ -23,7 +23,7 @@ function Bubble({ delay, startX }: { delay: number; startX: number }) {
         Animated.delay(delay),
         Animated.parallel([
           Animated.timing(translateY, {
-            toValue: -300,
+            toValue: -200,
             duration: 3000 + Math.random() * 2000,
             useNativeDriver: true,
           }),
@@ -62,10 +62,10 @@ function Bubble({ delay, startX }: { delay: number; startX: number }) {
 
 export function FishTank({ children }: FishTankProps) {
   // Create bubbles at different positions
-  const bubbles = Array.from({ length: 6 }, (_, i) => ({
+  const bubbles = Array.from({ length: 5 }, (_, i) => ({
     id: i,
-    delay: i * 500,
-    startX: 20 + (i * 50) % 200,
+    delay: i * 600,
+    startX: 15 + (i * 40) % 150,
   }));
 
   return (
@@ -88,8 +88,8 @@ export function FishTank({ children }: FishTankProps) {
           ))}
         </View>
 
-        {/* Fish container */}
-        <View style={styles.fishContainer}>{children}</View>
+        {/* Children (Fish and FoodDrop) */}
+        <View style={styles.contentContainer}>{children}</View>
 
         {/* Ground/sand */}
         <View style={styles.ground}>
@@ -105,13 +105,12 @@ export function FishTank({ children }: FishTankProps) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 8,
   },
   tank: {
     flex: 1,
     backgroundColor: THEME.surface,
-    borderRadius: RADIUS.xl,
-    borderWidth: 4,
+    borderRadius: RADIUS.lg,
+    borderWidth: 3,
     borderColor: THEME.tankBorder,
     overflow: 'hidden',
     position: 'relative',
@@ -129,17 +128,17 @@ const styles = StyleSheet.create({
   },
   bubblesContainer: {
     ...StyleSheet.absoluteFillObject,
-    bottom: 50,
+    bottom: 40,
   },
   bubble: {
     position: 'absolute',
     bottom: 0,
-    width: 12,
-    height: 12,
-    borderRadius: 6,
+    width: 10,
+    height: 10,
+    borderRadius: 5,
     backgroundColor: THEME.bubbleColor,
   },
-  fishContainer: {
+  contentContainer: {
     ...StyleSheet.absoluteFillObject,
     alignItems: 'center',
     justifyContent: 'center',
@@ -149,29 +148,29 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    height: 40,
+    height: 30,
     backgroundColor: 'rgba(194, 178, 128, 0.4)',
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
+    borderTopLeftRadius: 15,
+    borderTopRightRadius: 15,
   },
   rock: {
     position: 'absolute',
-    bottom: 5,
-    left: 20,
-    width: 30,
-    height: 20,
+    bottom: 3,
+    left: 15,
+    width: 20,
+    height: 14,
     backgroundColor: 'rgba(100, 100, 100, 0.5)',
-    borderRadius: 10,
+    borderRadius: 7,
   },
   rock2: {
-    left: 80,
-    width: 40,
-    height: 25,
+    left: 60,
+    width: 28,
+    height: 18,
   },
   rock3: {
     left: 'auto',
-    right: 30,
-    width: 25,
-    height: 18,
+    right: 20,
+    width: 18,
+    height: 12,
   },
 });
