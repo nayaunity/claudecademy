@@ -227,7 +227,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   emoji: {
-    fontSize: 56,
+    fontSize: 64,
   },
   happyIndicator: {
     position: 'absolute',

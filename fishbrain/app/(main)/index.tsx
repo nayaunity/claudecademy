@@ -20,7 +20,7 @@ import { Button } from '../../src/components/ui/Button';
 import { QuestionCard } from '../../src/components/question/QuestionCard';
 import { AnswerOption } from '../../src/components/question/AnswerOption';
 import { FISH_CONFIG } from '../../src/constants/fish';
-import { THEME, SPACING, FONT_SIZE, RADIUS } from '../../src/constants/theme';
+import { THEME, SPACING, FONT_SIZE } from '../../src/constants/theme';
 
 export default function HomeScreen() {
   const { state } = useGameState();
@@ -123,11 +123,7 @@ export default function HomeScreen() {
         <Text style={styles.category}>{currentQuestion.category}</Text>
         <QuestionCard question={currentQuestion.question} />
 
-        <ScrollView
-          style={styles.optionsScroll}
-          contentContainerStyle={styles.optionsContainer}
-          showsVerticalScrollIndicator={false}
-        >
+        <View style={styles.optionsContainer}>
           {currentQuestion.options.map((option) => (
             <AnswerOption
               key={option.id}
@@ -143,27 +139,26 @@ export default function HomeScreen() {
               onPress={() => handleOptionSelect(option.id)}
             />
           ))}
-        </ScrollView>
-
-        <View style={styles.buttonContainer}>
-          {!hasAnswered ? (
-            <Button
-              title="Submit"
-              onPress={handleSubmit}
-              disabled={!selectedOption}
-            />
-          ) : (
-            <Button
-              title="Next"
-              onPress={handleNextQuestion}
-              variant={isCorrect ? 'success' : 'primary'}
-              disabled={isDropping || isEating}
-            />
-          )}
         </View>
+
+        {/* Button right after options */}
+        {!hasAnswered ? (
+          <Button
+            title="Submit"
+            onPress={handleSubmit}
+            disabled={!selectedOption}
+          />
+        ) : (
+          <Button
+            title="Next"
+            onPress={handleNextQuestion}
+            variant={isCorrect ? 'success' : 'primary'}
+            disabled={isDropping || isEating}
+          />
+        )}
       </View>
 
-      {/* Fish Tank */}
+      {/* Fish Tank - Takes remaining space */}
       <View style={styles.tankSection}>
         <HealthBar health={state.health} />
         <View style={styles.tankWrapper}>
@@ -212,7 +207,6 @@ const styles = StyleSheet.create({
     color: THEME.textSecondary,
   },
   questionSection: {
-    flex: 1,
     paddingHorizontal: SPACING.lg,
   },
   category: {
@@ -221,20 +215,15 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     marginBottom: SPACING.xs,
   },
-  optionsScroll: {
-    flex: 1,
-  },
   optionsContainer: {
     gap: SPACING.sm,
-    paddingBottom: SPACING.sm,
-  },
-  buttonContainer: {
-    paddingVertical: SPACING.sm,
+    marginBottom: SPACING.md,
   },
   tankSection: {
-    height: 200,
+    flex: 1,
     paddingHorizontal: SPACING.lg,
     paddingBottom: SPACING.md,
+    marginTop: SPACING.md,
   },
   tankWrapper: {
     flex: 1,
