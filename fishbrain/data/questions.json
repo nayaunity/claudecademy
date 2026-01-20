@@ -1,0 +1,392 @@
+[
+  {
+    "id": "nn-001",
+    "category": "Neural Networks",
+    "question": "What is the primary purpose of an activation function in a neural network?",
+    "options": [
+      { "id": "a", "text": "To normalize the input data" },
+      { "id": "b", "text": "To introduce non-linearity into the network" },
+      { "id": "c", "text": "To reduce the number of parameters" },
+      { "id": "d", "text": "To speed up training" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nn-002",
+    "category": "Neural Networks",
+    "question": "Which activation function is most commonly used in the output layer for binary classification?",
+    "options": [
+      { "id": "a", "text": "ReLU" },
+      { "id": "b", "text": "Tanh" },
+      { "id": "c", "text": "Sigmoid" },
+      { "id": "d", "text": "Softmax" }
+    ],
+    "correctOptionId": "c",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nn-003",
+    "category": "Neural Networks",
+    "question": "What problem does batch normalization help address?",
+    "options": [
+      { "id": "a", "text": "Overfitting" },
+      { "id": "b", "text": "Internal covariate shift" },
+      { "id": "c", "text": "Vanishing gradients only" },
+      { "id": "d", "text": "Data augmentation" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nn-004",
+    "category": "Neural Networks",
+    "question": "What is 'backpropagation' used for in neural networks?",
+    "options": [
+      { "id": "a", "text": "Forward data propagation" },
+      { "id": "b", "text": "Computing gradients for weight updates" },
+      { "id": "c", "text": "Data preprocessing" },
+      { "id": "d", "text": "Feature extraction" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nn-005",
+    "category": "Neural Networks",
+    "question": "What is the 'vanishing gradient problem'?",
+    "options": [
+      { "id": "a", "text": "Gradients become too large during training" },
+      { "id": "b", "text": "Gradients become extremely small, slowing learning in early layers" },
+      { "id": "c", "text": "The network forgets previous training examples" },
+      { "id": "d", "text": "Weights become zero" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nn-006",
+    "category": "Neural Networks",
+    "question": "Which type of neural network is best suited for image classification?",
+    "options": [
+      { "id": "a", "text": "Recurrent Neural Network (RNN)" },
+      { "id": "b", "text": "Convolutional Neural Network (CNN)" },
+      { "id": "c", "text": "Fully Connected Network" },
+      { "id": "d", "text": "Autoencoder" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "easy"
+  },
+  {
+    "id": "llm-001",
+    "category": "LLMs & Transformers",
+    "question": "What is the key innovation of the Transformer architecture?",
+    "options": [
+      { "id": "a", "text": "Recurrent connections" },
+      { "id": "b", "text": "Self-attention mechanism" },
+      { "id": "c", "text": "Convolutional layers" },
+      { "id": "d", "text": "Skip connections" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "medium"
+  },
+  {
+    "id": "llm-002",
+    "category": "LLMs & Transformers",
+    "question": "What does 'GPT' stand for in GPT-4?",
+    "options": [
+      { "id": "a", "text": "General Purpose Transformer" },
+      { "id": "b", "text": "Generative Pre-trained Transformer" },
+      { "id": "c", "text": "Guided Processing Technology" },
+      { "id": "d", "text": "Gradient Pre-Training" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "easy"
+  },
+  {
+    "id": "llm-003",
+    "category": "LLMs & Transformers",
+    "question": "What is 'tokenization' in the context of LLMs?",
+    "options": [
+      { "id": "a", "text": "Encrypting the input text" },
+      { "id": "b", "text": "Breaking text into smaller units for processing" },
+      { "id": "c", "text": "Generating random tokens for security" },
+      { "id": "d", "text": "Compressing the model size" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "easy"
+  },
+  {
+    "id": "llm-004",
+    "category": "LLMs & Transformers",
+    "question": "What is the purpose of positional encoding in Transformers?",
+    "options": [
+      { "id": "a", "text": "To compress the input sequence" },
+      { "id": "b", "text": "To provide information about token positions in the sequence" },
+      { "id": "c", "text": "To normalize attention weights" },
+      { "id": "d", "text": "To reduce memory usage" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "medium"
+  },
+  {
+    "id": "llm-005",
+    "category": "LLMs & Transformers",
+    "question": "What does 'fine-tuning' an LLM mean?",
+    "options": [
+      { "id": "a", "text": "Training from scratch on new data" },
+      { "id": "b", "text": "Further training a pre-trained model on specific data" },
+      { "id": "c", "text": "Reducing the model size" },
+      { "id": "d", "text": "Optimizing inference speed" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "easy"
+  },
+  {
+    "id": "llm-006",
+    "category": "LLMs & Transformers",
+    "question": "What is 'hallucination' in the context of LLMs?",
+    "options": [
+      { "id": "a", "text": "The model generating creative content" },
+      { "id": "b", "text": "The model generating plausible but incorrect information" },
+      { "id": "c", "text": "The model refusing to answer" },
+      { "id": "d", "text": "The model repeating the same response" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pe-001",
+    "category": "Prompt Engineering",
+    "question": "What is 'few-shot learning' in prompt engineering?",
+    "options": [
+      { "id": "a", "text": "Training a model with very few parameters" },
+      { "id": "b", "text": "Providing examples in the prompt to guide the model" },
+      { "id": "c", "text": "Using a small model for inference" },
+      { "id": "d", "text": "Reducing the prompt length" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pe-002",
+    "category": "Prompt Engineering",
+    "question": "What is 'chain-of-thought' prompting?",
+    "options": [
+      { "id": "a", "text": "Asking multiple questions in sequence" },
+      { "id": "b", "text": "Encouraging the model to show reasoning steps" },
+      { "id": "c", "text": "Linking multiple prompts together" },
+      { "id": "d", "text": "Using bullet points in prompts" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pe-003",
+    "category": "Prompt Engineering",
+    "question": "What is 'zero-shot' prompting?",
+    "options": [
+      { "id": "a", "text": "Asking the model to perform a task without any examples" },
+      { "id": "b", "text": "Using the shortest possible prompt" },
+      { "id": "c", "text": "Prompting without any context" },
+      { "id": "d", "text": "Generating zero output" }
+    ],
+    "correctOptionId": "a",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pe-004",
+    "category": "Prompt Engineering",
+    "question": "What is the 'temperature' parameter in LLM generation?",
+    "options": [
+      { "id": "a", "text": "The GPU temperature during inference" },
+      { "id": "b", "text": "A parameter controlling output randomness" },
+      { "id": "c", "text": "The training speed" },
+      { "id": "d", "text": "The model's confidence level" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pe-005",
+    "category": "Prompt Engineering",
+    "question": "What is a 'system prompt' in conversational AI?",
+    "options": [
+      { "id": "a", "text": "The first message from the user" },
+      { "id": "b", "text": "Instructions that define the AI's behavior and role" },
+      { "id": "c", "text": "Error messages from the system" },
+      { "id": "d", "text": "The model's internal configuration" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pe-006",
+    "category": "Prompt Engineering",
+    "question": "What does RAG stand for in AI systems?",
+    "options": [
+      { "id": "a", "text": "Random Answer Generation" },
+      { "id": "b", "text": "Retrieval-Augmented Generation" },
+      { "id": "c", "text": "Rapid AI Growth" },
+      { "id": "d", "text": "Recursive Algorithm Gateway" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ml-001",
+    "category": "ML Fundamentals",
+    "question": "What is 'overfitting' in machine learning?",
+    "options": [
+      { "id": "a", "text": "The model is too simple" },
+      { "id": "b", "text": "The model performs well on training but poorly on new data" },
+      { "id": "c", "text": "The model trains too slowly" },
+      { "id": "d", "text": "The model has too few parameters" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ml-002",
+    "category": "ML Fundamentals",
+    "question": "What is the purpose of a validation set?",
+    "options": [
+      { "id": "a", "text": "To train the model" },
+      { "id": "b", "text": "To tune hyperparameters and prevent overfitting" },
+      { "id": "c", "text": "To test final model performance" },
+      { "id": "d", "text": "To clean the data" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ml-003",
+    "category": "ML Fundamentals",
+    "question": "What is 'gradient descent'?",
+    "options": [
+      { "id": "a", "text": "A type of neural network" },
+      { "id": "b", "text": "An optimization algorithm to minimize loss" },
+      { "id": "c", "text": "A data preprocessing technique" },
+      { "id": "d", "text": "A regularization method" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ml-004",
+    "category": "ML Fundamentals",
+    "question": "What is 'regularization' used for?",
+    "options": [
+      { "id": "a", "text": "To speed up training" },
+      { "id": "b", "text": "To prevent overfitting by penalizing complexity" },
+      { "id": "c", "text": "To increase model accuracy" },
+      { "id": "d", "text": "To normalize input data" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ml-005",
+    "category": "ML Fundamentals",
+    "question": "What is the difference between supervised and unsupervised learning?",
+    "options": [
+      { "id": "a", "text": "Supervised uses GPUs, unsupervised uses CPUs" },
+      { "id": "b", "text": "Supervised uses labeled data, unsupervised finds patterns without labels" },
+      { "id": "c", "text": "Supervised is faster than unsupervised" },
+      { "id": "d", "text": "There is no difference" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ml-006",
+    "category": "ML Fundamentals",
+    "question": "What is a 'loss function'?",
+    "options": [
+      { "id": "a", "text": "A function that measures model prediction error" },
+      { "id": "b", "text": "A function that deletes data" },
+      { "id": "c", "text": "A function that generates random numbers" },
+      { "id": "d", "text": "A function that compresses the model" }
+    ],
+    "correctOptionId": "a",
+    "difficulty": "easy"
+  },
+  {
+    "id": "eth-001",
+    "category": "AI Ethics & Applications",
+    "question": "What is 'AI bias'?",
+    "options": [
+      { "id": "a", "text": "When AI prefers certain programming languages" },
+      { "id": "b", "text": "When AI systems produce unfair outcomes for certain groups" },
+      { "id": "c", "text": "When AI runs slowly" },
+      { "id": "d", "text": "When AI uses too much memory" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "easy"
+  },
+  {
+    "id": "eth-002",
+    "category": "AI Ethics & Applications",
+    "question": "What is 'explainable AI' (XAI)?",
+    "options": [
+      { "id": "a", "text": "AI that can teach programming" },
+      { "id": "b", "text": "AI systems whose decisions can be understood by humans" },
+      { "id": "c", "text": "AI that explains jokes" },
+      { "id": "d", "text": "AI with simple architectures" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "medium"
+  },
+  {
+    "id": "eth-003",
+    "category": "AI Ethics & Applications",
+    "question": "What is a major concern with deepfakes?",
+    "options": [
+      { "id": "a", "text": "They use too much computing power" },
+      { "id": "b", "text": "They can spread misinformation and harm trust" },
+      { "id": "c", "text": "They are difficult to create" },
+      { "id": "d", "text": "They only work with text" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "easy"
+  },
+  {
+    "id": "eth-004",
+    "category": "AI Ethics & Applications",
+    "question": "What is 'AI alignment'?",
+    "options": [
+      { "id": "a", "text": "Arranging AI models in sequence" },
+      { "id": "b", "text": "Ensuring AI systems act according to human values and intentions" },
+      { "id": "c", "text": "Aligning text in AI outputs" },
+      { "id": "d", "text": "Synchronizing multiple AI models" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "medium"
+  },
+  {
+    "id": "eth-005",
+    "category": "AI Ethics & Applications",
+    "question": "What is 'data privacy' in the context of AI?",
+    "options": [
+      { "id": "a", "text": "Keeping AI code secret" },
+      { "id": "b", "text": "Protecting personal information used in AI training and inference" },
+      { "id": "c", "text": "Hiding AI from users" },
+      { "id": "d", "text": "Encrypting AI models" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "easy"
+  },
+  {
+    "id": "eth-006",
+    "category": "AI Ethics & Applications",
+    "question": "What is 'RLHF' in AI development?",
+    "options": [
+      { "id": "a", "text": "Rapid Learning for High Fidelity" },
+      { "id": "b", "text": "Reinforcement Learning from Human Feedback" },
+      { "id": "c", "text": "Recursive Language for High Frequency" },
+      { "id": "d", "text": "Reliable Learning for Hardware Functions" }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "hard"
+  }
+]
