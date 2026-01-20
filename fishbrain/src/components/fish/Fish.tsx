@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Animated, StyleSheet, View, Text } from 'react-native';
+import { Animated, StyleSheet, View, Text, Easing } from 'react-native';
 import { FishType, HealthState } from '../../types';
 import { FISH_CONFIG } from '../../constants/fish';
 import { THEME } from '../../constants/theme';
@@ -29,11 +29,13 @@ export function Fish({ fishType, healthState, isEating = false }: FishProps) {
           Animated.timing(swimY, {
             toValue: -40,
             duration: 400,
+            easing: Easing.out(Easing.cubic),
             useNativeDriver: true,
           }),
           Animated.timing(scale, {
             toValue: 1.15,
             duration: 400,
+            easing: Easing.out(Easing.cubic),
             useNativeDriver: true,
           }),
         ]),
@@ -80,11 +82,13 @@ export function Fish({ fishType, healthState, isEating = false }: FishProps) {
           Animated.timing(swimY, {
             toValue: 0,
             duration: 500,
+            easing: Easing.inOut(Easing.cubic),
             useNativeDriver: true,
           }),
           Animated.timing(scale, {
             toValue: 1,
             duration: 500,
+            easing: Easing.inOut(Easing.cubic),
             useNativeDriver: true,
           }),
         ]),
@@ -98,11 +102,13 @@ export function Fish({ fishType, healthState, isEating = false }: FishProps) {
       Animated.timing(swimY, {
         toValue: -60,
         duration: 2000,
+        easing: Easing.out(Easing.cubic),
         useNativeDriver: true,
       }).start();
       Animated.timing(rotation, {
         toValue: Math.PI,
         duration: 2000,
+        easing: Easing.out(Easing.cubic),
         useNativeDriver: true,
       }).start();
       return;
@@ -110,34 +116,64 @@ export function Fish({ fishType, healthState, isEating = false }: FishProps) {
 
     if (isEating) return;
 
-    const swimSpeed = healthState === 'thriving' ? 2000 : healthState === 'hungry' ? 3000 : 4000;
-    const swimDistance = healthState === 'thriving' ? 25 : healthState === 'hungry' ? 15 : 8;
+    const swimSpeed = healthState === 'thriving' ? 1800 : healthState === 'hungry' ? 2400 : 3000;
+    const swimDistance = healthState === 'thriving' ? 20 : healthState === 'hungry' ? 12 : 6;
 
+    // Smooth horizontal swimming: right → center → left → center → repeat
     const swimAnimation = Animated.loop(
       Animated.sequence([
         Animated.timing(swimX, {
           toValue: swimDistance,
           duration: swimSpeed,
+          easing: Easing.inOut(Easing.quad),
+          useNativeDriver: true,
+        }),
+        Animated.timing(swimX, {
+          toValue: 0,
+          duration: swimSpeed,
+          easing: Easing.inOut(Easing.quad),
           useNativeDriver: true,
         }),
         Animated.timing(swimX, {
           toValue: -swimDistance,
           duration: swimSpeed,
+          easing: Easing.inOut(Easing.quad),
+          useNativeDriver: true,
+        }),
+        Animated.timing(swimX, {
+          toValue: 0,
+          duration: swimSpeed,
+          easing: Easing.inOut(Easing.quad),
           useNativeDriver: true,
         }),
       ])
     );
 
+    // Smooth vertical bobbing: down → center → up → center → repeat
     const bobAnimation = Animated.loop(
       Animated.sequence([
         Animated.timing(swimY, {
-          toValue: 8,
-          duration: swimSpeed / 2,
+          toValue: 6,
+          duration: swimSpeed * 0.8,
+          easing: Easing.inOut(Easing.quad),
           useNativeDriver: true,
         }),
         Animated.timing(swimY, {
-          toValue: -8,
-          duration: swimSpeed / 2,
+          toValue: 0,
+          duration: swimSpeed * 0.8,
+          easing: Easing.inOut(Easing.quad),
+          useNativeDriver: true,
+        }),
+        Animated.timing(swimY, {
+          toValue: -6,
+          duration: swimSpeed * 0.8,
+          easing: Easing.inOut(Easing.quad),
+          useNativeDriver: true,
+        }),
+        Animated.timing(swimY, {
+          toValue: 0,
+          duration: swimSpeed * 0.8,
+          easing: Easing.inOut(Easing.quad),
           useNativeDriver: true,
         }),
       ])
@@ -160,13 +196,15 @@ export function Fish({ fishType, healthState, isEating = false }: FishProps) {
       const pulseAnimation = Animated.loop(
         Animated.sequence([
           Animated.timing(scale, {
-            toValue: 1.08,
-            duration: 1000,
+            toValue: 1.06,
+            duration: 1200,
+            easing: Easing.inOut(Easing.sin),
             useNativeDriver: true,
           }),
           Animated.timing(scale, {
             toValue: 1,
-            duration: 1000,
+            duration: 1200,
+            easing: Easing.inOut(Easing.sin),
             useNativeDriver: true,
           }),
         ])
