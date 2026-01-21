@@ -5,22 +5,17 @@ export type FishType = 'goldfish' | 'betta' | 'clownfish';
 export type HealthState = 'thriving' | 'hungry' | 'critical' | 'dead';
 
 // Question difficulty
-export type Difficulty = 'easy' | 'medium' | 'hard';
-
-// Question option
-export interface QuestionOption {
-  id: string;
-  text: string;
-}
+export type Difficulty = 'beginner' | 'intermediate' | 'advanced';
 
 // Question
 export interface Question {
   id: string;
   category: string;
   question: string;
-  options: QuestionOption[];
-  correctOptionId: string;
+  options: string[];
+  correctAnswer: number;
   difficulty: Difficulty;
+  explanation: string;
 }
 
 // Game state

@@ -1,9 +1,8 @@
 import { Pressable, Text, StyleSheet, View } from 'react-native';
-import { QuestionOption } from '../../types';
 import { THEME, SPACING, RADIUS, FONT_SIZE } from '../../constants/theme';
 
 interface AnswerOptionProps {
-  option: QuestionOption;
+  text: string;
   isSelected: boolean;
   isCorrect: boolean;
   isWrong: boolean;
@@ -12,7 +11,7 @@ interface AnswerOptionProps {
 }
 
 export function AnswerOption({
-  option,
+  text,
   isSelected,
   isCorrect,
   isWrong,
@@ -46,7 +45,7 @@ export function AnswerOption({
     >
       <View style={styles.content}>
         <Text style={[styles.optionText, { color: getTextColor() }]}>
-          {option.text}
+          {text}
         </Text>
         {isCorrect && <Text style={styles.indicator}>✓</Text>}
         {isWrong && <Text style={styles.indicator}>✗</Text>}

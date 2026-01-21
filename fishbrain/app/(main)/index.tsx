@@ -4,7 +4,6 @@ import {
   Text,
   StyleSheet,
   SafeAreaView,
-  ScrollView,
 } from 'react-native';
 import { router } from 'expo-router';
 import * as Haptics from 'expo-haptics';
@@ -22,6 +21,14 @@ import { AnswerOption } from '../../src/components/question/AnswerOption';
 import { FISH_CONFIG } from '../../src/constants/fish';
 import { THEME, SPACING, FONT_SIZE } from '../../src/constants/theme';
 
+// Format category from snake_case to Title Case
+const formatCategory = (category: string): string => {
+  return category
+    .split('_')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+};
+
 export default function HomeScreen() {
   const { state } = useGameState();
   const { healthState, isDead } = useGameDerived();
@@ -30,7 +37,7 @@ export default function HomeScreen() {
 
   const [isDropping, setIsDropping] = useState(false);
   const [isEating, setIsEating] = useState(false);
-  const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [hasAnswered, setHasAnswered] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
 
@@ -50,13 +57,13 @@ export default function HomeScreen() {
     }
   }, [isDead]);
 
-  const handleOptionSelect = (optionId: string) => {
+  const handleOptionSelect = (optionIndex: number) => {
     if (hasAnswered) return;
-    setSelectedOption(optionId);
+    setSelectedOption(optionIndex);
   };
 
   const handleSubmit = async () => {
-    if (!selectedOption || !currentQuestion) return;
+    if (selectedOption === null || !currentQuestion) return;
 
     const correct = checkAnswer(selectedOption);
     setIsCorrect(correct);
@@ -125,33 +132,40 @@ export default function HomeScreen() {
 
       {/* Question Section */}
       <View style={styles.questionSection}>
-        <Text style={styles.category}>{currentQuestion.category}</Text>
+        <Text style={styles.category}>{formatCategory(currentQuestion.category)}</Text>
         <QuestionCard question={currentQuestion.question} />
 
         <View style={styles.optionsContainer}>
-          {currentQuestion.options.map((option) => (
+          {currentQuestion.options.map((option, index) => (
             <AnswerOption
-              key={option.id}
-              option={option}
-              isSelected={selectedOption === option.id}
-              isCorrect={hasAnswered && option.id === currentQuestion.correctOptionId}
+              key={index}
+              text={option}
+              isSelected={selectedOption === index}
+              isCorrect={hasAnswered && index === currentQuestion.correctAnswer}
               isWrong={
                 hasAnswered &&
-                selectedOption === option.id &&
-                option.id !== currentQuestion.correctOptionId
+                selectedOption === index &&
+                index !== currentQuestion.correctAnswer
               }
               disabled={hasAnswered}
-              onPress={() => handleOptionSelect(option.id)}
+              onPress={() => handleOptionSelect(index)}
             />
           ))}
         </View>
+
+        {/* Explanation - shown after answering */}
+        {hasAnswered && (
+          <View style={styles.explanationContainer}>
+            <Text style={styles.explanationText}>{currentQuestion.explanation}</Text>
+          </View>
+        )}
 
         {/* Button - hide during correct answer animation */}
         {!hasAnswered ? (
           <Button
             title="Submit"
             onPress={handleSubmit}
-            disabled={!selectedOption}
+            disabled={selectedOption === null}
           />
         ) : !isCorrect ? (
           <Button
@@ -220,7 +234,18 @@ const styles = StyleSheet.create({
   },
   optionsContainer: {
     gap: SPACING.sm,
+    marginBottom: SPACING.sm,
+  },
+  explanationContainer: {
+    backgroundColor: THEME.surface,
+    borderRadius: 8,
+    padding: SPACING.md,
     marginBottom: SPACING.md,
+  },
+  explanationText: {
+    fontSize: FONT_SIZE.sm,
+    color: THEME.textSecondary,
+    lineHeight: 20,
   },
   tankSection: {
     flex: 1,

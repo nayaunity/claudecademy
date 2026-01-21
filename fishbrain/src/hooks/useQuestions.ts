@@ -45,11 +45,11 @@ export function useQuestions() {
     setCurrentQuestion(null);
   }, []);
 
-  // Check if answer is correct
+  // Check if answer is correct (optionIndex is 0-based)
   const checkAnswer = useCallback(
-    (optionId: string): boolean => {
+    (optionIndex: number): boolean => {
       if (!currentQuestion) return false;
-      return currentQuestion.correctOptionId === optionId;
+      return currentQuestion.correctAnswer === optionIndex;
     },
     [currentQuestion]
   );

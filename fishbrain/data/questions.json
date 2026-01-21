@@ -1,392 +1,1850 @@
 [
   {
-    "id": "nn-001",
-    "category": "Neural Networks",
-    "question": "What is the primary purpose of an activation function in a neural network?",
+    "id": "ai_fund_001",
+    "category": "ai_fundamentals",
+    "difficulty": "beginner",
+    "question": "What does AI stand for?",
     "options": [
-      { "id": "a", "text": "To normalize the input data" },
-      { "id": "b", "text": "To introduce non-linearity into the network" },
-      { "id": "c", "text": "To reduce the number of parameters" },
-      { "id": "d", "text": "To speed up training" }
+      "Augmented Interaction",
+      "Automated Information",
+      "Artificial Intelligence",
+      "Algorithmic Integration"
     ],
-    "correctOptionId": "b",
-    "difficulty": "easy"
+    "correctAnswer": 2,
+    "explanation": "AI stands for Artificial Intelligence - the simulation of human intelligence by machines."
   },
   {
-    "id": "nn-002",
-    "category": "Neural Networks",
-    "question": "Which activation function is most commonly used in the output layer for binary classification?",
+    "id": "ai_fund_002",
+    "category": "ai_fundamentals",
+    "difficulty": "beginner",
+    "question": "Which of these is NOT a recognized type of AI?",
     "options": [
-      { "id": "a", "text": "ReLU" },
-      { "id": "b", "text": "Tanh" },
-      { "id": "c", "text": "Sigmoid" },
-      { "id": "d", "text": "Softmax" }
+      "Narrow AI",
+      "General AI",
+      "Super AI",
+      "Parallel AI"
     ],
-    "correctOptionId": "c",
-    "difficulty": "easy"
+    "correctAnswer": 3,
+    "explanation": "The three recognized types are Narrow AI (specialized tasks), General AI (human-level), and Super AI (beyond human). Parallel AI is not a classification."
   },
   {
-    "id": "nn-003",
-    "category": "Neural Networks",
-    "question": "What problem does batch normalization help address?",
+    "id": "ai_fund_003",
+    "category": "ai_fundamentals",
+    "difficulty": "beginner",
+    "question": "What type of AI exists today?",
     "options": [
-      { "id": "a", "text": "Overfitting" },
-      { "id": "b", "text": "Internal covariate shift" },
-      { "id": "c", "text": "Vanishing gradients only" },
-      { "id": "d", "text": "Data augmentation" }
+      "Super AI that exceeds humans",
+      "General AI with human abilities",
+      "Narrow AI for specific tasks",
+      "Hybrid AI combining both types"
     ],
-    "correctOptionId": "b",
-    "difficulty": "medium"
+    "correctAnswer": 2,
+    "explanation": "Currently, all AI systems are Narrow AI - they excel at specific tasks but can't generalize like humans."
   },
   {
-    "id": "nn-004",
-    "category": "Neural Networks",
-    "question": "What is 'backpropagation' used for in neural networks?",
+    "id": "ai_fund_004",
+    "category": "ai_fundamentals",
+    "difficulty": "beginner",
+    "question": "Who coined the term 'Artificial Intelligence' in 1956?",
     "options": [
-      { "id": "a", "text": "Forward data propagation" },
-      { "id": "b", "text": "Computing gradients for weight updates" },
-      { "id": "c", "text": "Data preprocessing" },
-      { "id": "d", "text": "Feature extraction" }
+      "Alan Turing",
+      "Marvin Minsky",
+      "John McCarthy",
+      "Claude Shannon"
     ],
-    "correctOptionId": "b",
-    "difficulty": "easy"
+    "correctAnswer": 2,
+    "explanation": "John McCarthy coined the term 'Artificial Intelligence' in 1956 at the Dartmouth Conference."
   },
   {
-    "id": "nn-005",
-    "category": "Neural Networks",
-    "question": "What is the 'vanishing gradient problem'?",
+    "id": "ai_fund_005",
+    "category": "ai_fundamentals",
+    "difficulty": "beginner",
+    "question": "What does the Turing Test evaluate?",
     "options": [
-      { "id": "a", "text": "Gradients become too large during training" },
-      { "id": "b", "text": "Gradients become extremely small, slowing learning in early layers" },
-      { "id": "c", "text": "The network forgets previous training examples" },
-      { "id": "d", "text": "Weights become zero" }
+      "Human-like conversation ability",
+      "Memory capacity of systems",
+      "Processing speed of AI",
+      "Mathematical accuracy"
     ],
-    "correctOptionId": "b",
-    "difficulty": "medium"
+    "correctAnswer": 0,
+    "explanation": "The Turing Test, proposed by Alan Turing in 1950, tests if a machine can fool a human into thinking it's also human through conversation."
   },
   {
-    "id": "nn-006",
-    "category": "Neural Networks",
-    "question": "Which type of neural network is best suited for image classification?",
+    "id": "ai_fund_006",
+    "category": "ai_fundamentals",
+    "difficulty": "intermediate",
+    "question": "What was the 'AI Winter'?",
     "options": [
-      { "id": "a", "text": "Recurrent Neural Network (RNN)" },
-      { "id": "b", "text": "Convolutional Neural Network (CNN)" },
-      { "id": "c", "text": "Fully Connected Network" },
-      { "id": "d", "text": "Autoencoder" }
+      "A period of rapid AI breakthroughs",
+      "A period of reduced AI funding",
+      "A cooling method for AI hardware",
+      "A type of AI stress testing"
     ],
-    "correctOptionId": "b",
-    "difficulty": "easy"
+    "correctAnswer": 1,
+    "explanation": "AI Winters were periods (1970s and late 1980s) when AI funding and interest dropped due to unmet expectations."
   },
   {
-    "id": "llm-001",
-    "category": "LLMs & Transformers",
-    "question": "What is the key innovation of the Transformer architecture?",
+    "id": "ai_fund_007",
+    "category": "ai_fundamentals",
+    "difficulty": "beginner",
+    "question": "Which company created ChatGPT?",
     "options": [
-      { "id": "a", "text": "Recurrent connections" },
-      { "id": "b", "text": "Self-attention mechanism" },
-      { "id": "c", "text": "Convolutional layers" },
-      { "id": "d", "text": "Skip connections" }
+      "Google DeepMind",
+      "Meta AI Research",
+      "Microsoft Research",
+      "OpenAI"
     ],
-    "correctOptionId": "b",
-    "difficulty": "medium"
+    "correctAnswer": 3,
+    "explanation": "OpenAI created ChatGPT, which launched in November 2022 and sparked the current AI boom."
   },
   {
-    "id": "llm-002",
-    "category": "LLMs & Transformers",
-    "question": "What does 'GPT' stand for in GPT-4?",
+    "id": "ai_fund_008",
+    "category": "ai_fundamentals",
+    "difficulty": "beginner",
+    "question": "What is an algorithm in computing?",
     "options": [
-      { "id": "a", "text": "General Purpose Transformer" },
-      { "id": "b", "text": "Generative Pre-trained Transformer" },
-      { "id": "c", "text": "Guided Processing Technology" },
-      { "id": "d", "text": "Gradient Pre-Training" }
+      "A type of programming language",
+      "A data storage format",
+      "A hardware processing unit",
+      "Step-by-step problem-solving instructions"
     ],
-    "correctOptionId": "b",
-    "difficulty": "easy"
+    "correctAnswer": 3,
+    "explanation": "An algorithm is a sequence of well-defined instructions to perform a task or solve a problem."
   },
   {
-    "id": "llm-003",
-    "category": "LLMs & Transformers",
-    "question": "What is 'tokenization' in the context of LLMs?",
+    "id": "ai_fund_009",
+    "category": "ai_fundamentals",
+    "difficulty": "intermediate",
+    "question": "What does 'training' an AI model mean?",
     "options": [
-      { "id": "a", "text": "Encrypting the input text" },
-      { "id": "b", "text": "Breaking text into smaller units for processing" },
-      { "id": "c", "text": "Generating random tokens for security" },
-      { "id": "d", "text": "Compressing the model size" }
+      "Writing the model's source code",
+      "Installing the model on servers",
+      "Testing it with sample inputs",
+      "Exposing it to data to learn patterns"
     ],
-    "correctOptionId": "b",
-    "difficulty": "easy"
+    "correctAnswer": 3,
+    "explanation": "Training involves exposing the model to large amounts of data so it can learn patterns and make predictions."
   },
   {
-    "id": "llm-004",
-    "category": "LLMs & Transformers",
-    "question": "What is the purpose of positional encoding in Transformers?",
+    "id": "ai_fund_010",
+    "category": "ai_fundamentals",
+    "difficulty": "intermediate",
+    "question": "What is 'inference' in AI?",
     "options": [
-      { "id": "a", "text": "To compress the input sequence" },
-      { "id": "b", "text": "To provide information about token positions in the sequence" },
-      { "id": "c", "text": "To normalize attention weights" },
-      { "id": "d", "text": "To reduce memory usage" }
+      "Compressing model size",
+      "The initial training process",
+      "Evaluating model accuracy",
+      "Using a trained model on new data"
     ],
-    "correctOptionId": "b",
-    "difficulty": "medium"
+    "correctAnswer": 3,
+    "explanation": "Inference is when a trained model is used to make predictions or decisions on new, unseen data."
   },
   {
-    "id": "llm-005",
-    "category": "LLMs & Transformers",
-    "question": "What does 'fine-tuning' an LLM mean?",
+    "id": "ai_fund_011",
+    "category": "ai_fundamentals",
+    "difficulty": "beginner",
+    "question": "What is a 'model' in machine learning?",
     "options": [
-      { "id": "a", "text": "Training from scratch on new data" },
-      { "id": "b", "text": "Further training a pre-trained model on specific data" },
-      { "id": "c", "text": "Reducing the model size" },
-      { "id": "d", "text": "Optimizing inference speed" }
+      "The training dataset used",
+      "The computer hardware used",
+      "A program trained to find patterns",
+      "A visualization of results"
     ],
-    "correctOptionId": "b",
-    "difficulty": "easy"
+    "correctAnswer": 2,
+    "explanation": "An AI model is a program that has been trained on data to recognize patterns and make decisions."
   },
   {
-    "id": "llm-006",
-    "category": "LLMs & Transformers",
-    "question": "What is 'hallucination' in the context of LLMs?",
+    "id": "ai_fund_012",
+    "category": "ai_fundamentals",
+    "difficulty": "advanced",
+    "question": "What does the 'Chinese Room' argument claim about AI?",
     "options": [
-      { "id": "a", "text": "The model generating creative content" },
-      { "id": "b", "text": "The model generating plausible but incorrect information" },
-      { "id": "c", "text": "The model refusing to answer" },
-      { "id": "d", "text": "The model repeating the same response" }
+      "AI can achieve true understanding",
+      "Chinese characters are best for AI",
+      "AI processes symbols without understanding",
+      "AI requires human supervision"
     ],
-    "correctOptionId": "b",
-    "difficulty": "medium"
+    "correctAnswer": 2,
+    "explanation": "John Searle's Chinese Room argues that even if AI produces correct outputs, it doesn't mean it truly 'understands' - it's just manipulating symbols."
   },
   {
-    "id": "pe-001",
-    "category": "Prompt Engineering",
-    "question": "What is 'few-shot learning' in prompt engineering?",
+    "id": "ml_001",
+    "category": "machine_learning",
+    "difficulty": "beginner",
+    "question": "What does ML stand for in AI?",
     "options": [
-      { "id": "a", "text": "Training a model with very few parameters" },
-      { "id": "b", "text": "Providing examples in the prompt to guide the model" },
-      { "id": "c", "text": "Using a small model for inference" },
-      { "id": "d", "text": "Reducing the prompt length" }
+      "Model Learning",
+      "Machine Learning",
+      "Mathematical Logic",
+      "Memory Layers"
     ],
-    "correctOptionId": "b",
-    "difficulty": "easy"
+    "correctAnswer": 1,
+    "explanation": "ML stands for Machine Learning - a subset of AI where systems learn from data without being explicitly programmed."
   },
   {
-    "id": "pe-002",
-    "category": "Prompt Engineering",
-    "question": "What is 'chain-of-thought' prompting?",
+    "id": "ml_002",
+    "category": "machine_learning",
+    "difficulty": "beginner",
+    "question": "What is supervised learning?",
     "options": [
-      { "id": "a", "text": "Asking multiple questions in sequence" },
-      { "id": "b", "text": "Encouraging the model to show reasoning steps" },
-      { "id": "c", "text": "Linking multiple prompts together" },
-      { "id": "d", "text": "Using bullet points in prompts" }
+      "Learning from labeled examples",
+      "Learning without any data",
+      "Learning through trial and error",
+      "Learning from unlabeled data"
     ],
-    "correctOptionId": "b",
-    "difficulty": "medium"
+    "correctAnswer": 0,
+    "explanation": "Supervised learning uses labeled datasets where the correct output is known, allowing the model to learn the relationship between inputs and outputs."
   },
   {
-    "id": "pe-003",
-    "category": "Prompt Engineering",
-    "question": "What is 'zero-shot' prompting?",
+    "id": "ml_003",
+    "category": "machine_learning",
+    "difficulty": "beginner",
+    "question": "What is unsupervised learning?",
     "options": [
-      { "id": "a", "text": "Asking the model to perform a task without any examples" },
-      { "id": "b", "text": "Using the shortest possible prompt" },
-      { "id": "c", "text": "Prompting without any context" },
-      { "id": "d", "text": "Generating zero output" }
+      "Learning from labeled examples",
+      "Learning through rewards",
+      "Learning from unlabeled data",
+      "Learning with human feedback"
     ],
-    "correctOptionId": "a",
-    "difficulty": "easy"
+    "correctAnswer": 2,
+    "explanation": "Unsupervised learning finds patterns in data without labeled examples - the model discovers structure on its own."
   },
   {
-    "id": "pe-004",
-    "category": "Prompt Engineering",
-    "question": "What is the 'temperature' parameter in LLM generation?",
+    "id": "ml_004",
+    "category": "machine_learning",
+    "difficulty": "intermediate",
+    "question": "What is reinforcement learning?",
     "options": [
-      { "id": "a", "text": "The GPU temperature during inference" },
-      { "id": "b", "text": "A parameter controlling output randomness" },
-      { "id": "c", "text": "The training speed" },
-      { "id": "d", "text": "The model's confidence level" }
+      "Learning from labeled datasets",
+      "Learning by finding clusters",
+      "Learning from human annotations",
+      "Learning through rewards and penalties"
     ],
-    "correctOptionId": "b",
-    "difficulty": "medium"
+    "correctAnswer": 3,
+    "explanation": "Reinforcement learning trains models through rewards and penalties, like how you might train a pet with treats."
   },
   {
-    "id": "pe-005",
-    "category": "Prompt Engineering",
-    "question": "What is a 'system prompt' in conversational AI?",
+    "id": "ml_005",
+    "category": "machine_learning",
+    "difficulty": "beginner",
+    "question": "What is a 'dataset' in machine learning?",
     "options": [
-      { "id": "a", "text": "The first message from the user" },
-      { "id": "b", "text": "Instructions that define the AI's behavior and role" },
-      { "id": "c", "text": "Error messages from the system" },
-      { "id": "d", "text": "The model's internal configuration" }
+      "The model's source code",
+      "The output predictions",
+      "A collection of training examples",
+      "The neural network structure"
     ],
-    "correctOptionId": "b",
-    "difficulty": "easy"
+    "correctAnswer": 2,
+    "explanation": "A dataset is a collection of data examples used for training, validating, or testing machine learning models."
   },
   {
-    "id": "pe-006",
-    "category": "Prompt Engineering",
-    "question": "What does RAG stand for in AI systems?",
-    "options": [
-      { "id": "a", "text": "Random Answer Generation" },
-      { "id": "b", "text": "Retrieval-Augmented Generation" },
-      { "id": "c", "text": "Rapid AI Growth" },
-      { "id": "d", "text": "Recursive Algorithm Gateway" }
-    ],
-    "correctOptionId": "b",
-    "difficulty": "hard"
-  },
-  {
-    "id": "ml-001",
-    "category": "ML Fundamentals",
+    "id": "ml_006",
+    "category": "machine_learning",
+    "difficulty": "intermediate",
     "question": "What is 'overfitting' in machine learning?",
     "options": [
-      { "id": "a", "text": "The model is too simple" },
-      { "id": "b", "text": "The model performs well on training but poorly on new data" },
-      { "id": "c", "text": "The model trains too slowly" },
-      { "id": "d", "text": "The model has too few parameters" }
+      "Model is too simple for the data",
+      "Model memorizes training data poorly generalizing",
+      "Model trains too slowly",
+      "Model requires too much memory"
     ],
-    "correctOptionId": "b",
-    "difficulty": "easy"
+    "correctAnswer": 1,
+    "explanation": "Overfitting occurs when a model memorizes training data instead of learning general patterns, performing poorly on new data."
   },
   {
-    "id": "ml-002",
-    "category": "ML Fundamentals",
-    "question": "What is the purpose of a validation set?",
+    "id": "ml_007",
+    "category": "machine_learning",
+    "difficulty": "intermediate",
+    "question": "What is 'underfitting' in machine learning?",
     "options": [
-      { "id": "a", "text": "To train the model" },
-      { "id": "b", "text": "To tune hyperparameters and prevent overfitting" },
-      { "id": "c", "text": "To test final model performance" },
-      { "id": "d", "text": "To clean the data" }
+      "Model memorizes training data",
+      "Model is too simple to capture patterns",
+      "Model trains too quickly",
+      "Model uses too much memory"
     ],
-    "correctOptionId": "b",
-    "difficulty": "medium"
+    "correctAnswer": 1,
+    "explanation": "Underfitting happens when a model is too simple to learn the underlying patterns, performing poorly on both training and new data."
   },
   {
-    "id": "ml-003",
-    "category": "ML Fundamentals",
+    "id": "ml_008",
+    "category": "machine_learning",
+    "difficulty": "beginner",
+    "question": "What is classification in machine learning?",
+    "options": [
+      "Predicting discrete categories",
+      "Grouping similar data points",
+      "Predicting continuous numbers",
+      "Reducing data dimensions"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Classification predicts discrete categories - like spam/not spam, cat/dog, or sentiment positive/negative."
+  },
+  {
+    "id": "ml_009",
+    "category": "machine_learning",
+    "difficulty": "beginner",
+    "question": "What is regression in machine learning?",
+    "options": [
+      "Predicting continuous numerical values",
+      "Predicting categories or labels",
+      "Grouping similar items together",
+      "Reducing the number of features"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Regression predicts continuous values - like house prices, temperature, or stock prices."
+  },
+  {
+    "id": "ml_010",
+    "category": "machine_learning",
+    "difficulty": "intermediate",
+    "question": "What is a 'feature' in machine learning?",
+    "options": [
+      "The model's prediction output",
+      "The training algorithm used",
+      "An input variable used for prediction",
+      "A type of neural network"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Features are the input variables that a model uses to make predictions - like age, income, or pixel values."
+  },
+  {
+    "id": "ml_011",
+    "category": "machine_learning",
+    "difficulty": "intermediate",
+    "question": "What is 'feature engineering'?",
+    "options": [
+      "Building neural network layers",
+      "Optimizing model parameters",
+      "Creating relevant input variables",
+      "Cleaning corrupted data"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Feature engineering is the process of using domain knowledge to create or select the most relevant input variables for your model."
+  },
+  {
+    "id": "ml_012",
+    "category": "machine_learning",
+    "difficulty": "intermediate",
+    "question": "What is a 'training set' in ML?",
+    "options": [
+      "Data used to evaluate final performance",
+      "Data used to teach the model",
+      "Data used to tune hyperparameters",
+      "Data used to test edge cases"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The training set is the subset of data used to teach the model patterns - typically 70-80% of your total data."
+  },
+  {
+    "id": "ml_013",
+    "category": "machine_learning",
+    "difficulty": "intermediate",
+    "question": "What is a 'test set' in ML?",
+    "options": [
+      "Data for final performance evaluation",
+      "Data for training the model",
+      "Data for tuning hyperparameters",
+      "Data for debugging code"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The test set is held-out data used to evaluate how well the model generalizes to new, unseen examples."
+  },
+  {
+    "id": "ml_014",
+    "category": "machine_learning",
+    "difficulty": "intermediate",
+    "question": "What is a 'validation set' used for?",
+    "options": [
+      "Final model evaluation",
+      "Data augmentation",
+      "Initial model training",
+      "Tuning hyperparameters during training"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Validation uses a separate dataset during training to tune hyperparameters and prevent overfitting before final testing."
+  },
+  {
+    "id": "ml_015",
+    "category": "machine_learning",
+    "difficulty": "advanced",
+    "question": "What is 'cross-validation'?",
+    "options": [
+      "Validating across multiple models",
+      "Validating with external datasets",
+      "Comparing different algorithms",
+      "Rotating data folds for training/validation"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Cross-validation splits data into k folds, training on k-1 and validating on 1, rotating through all combinations for robust evaluation."
+  },
+  {
+    "id": "ml_016",
+    "category": "machine_learning",
+    "difficulty": "intermediate",
+    "question": "What is a 'hyperparameter'?",
+    "options": [
+      "A parameter learned during training",
+      "A metric for model accuracy",
+      "The model's final output",
+      "A setting configured before training"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Hyperparameters are settings chosen before training (like learning rate, batch size) that aren't learned from data but affect how learning happens."
+  },
+  {
+    "id": "ml_017",
+    "category": "machine_learning",
+    "difficulty": "advanced",
     "question": "What is 'gradient descent'?",
     "options": [
-      { "id": "a", "text": "A type of neural network" },
-      { "id": "b", "text": "An optimization algorithm to minimize loss" },
-      { "id": "c", "text": "A data preprocessing technique" },
-      { "id": "d", "text": "A regularization method" }
+      "A data preprocessing technique",
+      "A technique for feature selection",
+      "A method for data augmentation",
+      "An optimization algorithm minimizing error"
     ],
-    "correctOptionId": "b",
-    "difficulty": "easy"
+    "correctAnswer": 3,
+    "explanation": "Gradient descent iteratively adjusts model parameters in the direction that reduces error, like walking downhill to find the lowest point."
   },
   {
-    "id": "ml-004",
-    "category": "ML Fundamentals",
-    "question": "What is 'regularization' used for?",
+    "id": "ml_018",
+    "category": "machine_learning",
+    "difficulty": "beginner",
+    "question": "What does 'accuracy' measure in ML?",
     "options": [
-      { "id": "a", "text": "To speed up training" },
-      { "id": "b", "text": "To prevent overfitting by penalizing complexity" },
-      { "id": "c", "text": "To increase model accuracy" },
-      { "id": "d", "text": "To normalize input data" }
+      "Percentage of correct predictions",
+      "How fast the model runs",
+      "Amount of training data used",
+      "Complexity of the model"
     ],
-    "correctOptionId": "b",
-    "difficulty": "medium"
+    "correctAnswer": 0,
+    "explanation": "Accuracy is the ratio of correct predictions to total predictions - a basic metric for classification performance."
   },
   {
-    "id": "ml-005",
-    "category": "ML Fundamentals",
-    "question": "What is the difference between supervised and unsupervised learning?",
+    "id": "ml_019",
+    "category": "machine_learning",
+    "difficulty": "intermediate",
+    "question": "Why can accuracy be a misleading metric?",
     "options": [
-      { "id": "a", "text": "Supervised uses GPUs, unsupervised uses CPUs" },
-      { "id": "b", "text": "Supervised uses labeled data, unsupervised finds patterns without labels" },
-      { "id": "c", "text": "Supervised is faster than unsupervised" },
-      { "id": "d", "text": "There is no difference" }
+      "It's computationally expensive",
+      "It can be high with imbalanced classes",
+      "It only works for regression",
+      "It requires labeled data"
     ],
-    "correctOptionId": "b",
-    "difficulty": "easy"
+    "correctAnswer": 1,
+    "explanation": "With imbalanced data (e.g., 99% negative, 1% positive), a model predicting all negative gets 99% accuracy but misses all positive cases."
   },
   {
-    "id": "ml-006",
-    "category": "ML Fundamentals",
-    "question": "What is a 'loss function'?",
+    "id": "ml_020",
+    "category": "machine_learning",
+    "difficulty": "advanced",
+    "question": "What does 'precision' measure in classification?",
     "options": [
-      { "id": "a", "text": "A function that measures model prediction error" },
-      { "id": "b", "text": "A function that deletes data" },
-      { "id": "c", "text": "A function that generates random numbers" },
-      { "id": "d", "text": "A function that compresses the model" }
+      "Proportion of actual positives found",
+      "Overall prediction accuracy",
+      "Proportion of positive predictions correct",
+      "Speed of model inference"
     ],
-    "correctOptionId": "a",
-    "difficulty": "easy"
+    "correctAnswer": 2,
+    "explanation": "Precision = True Positives / (True Positives + False Positives). It measures how many of your positive predictions were correct."
   },
   {
-    "id": "eth-001",
-    "category": "AI Ethics & Applications",
+    "id": "ml_021",
+    "category": "machine_learning",
+    "difficulty": "advanced",
+    "question": "What does 'recall' measure in classification?",
+    "options": [
+      "Proportion of predictions correct",
+      "Proportion of actual positives found",
+      "Speed of retrieving results",
+      "Memory usage during training"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Recall = True Positives / (True Positives + False Negatives). It measures how many actual positives you caught."
+  },
+  {
+    "id": "nn_001",
+    "category": "neural_networks",
+    "difficulty": "beginner",
+    "question": "What biological structure inspired neural networks?",
+    "options": [
+      "Cell membranes",
+      "The nervous system",
+      "DNA molecules",
+      "The human brain"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Neural networks are loosely inspired by biological neurons in the brain and how they connect and transmit signals."
+  },
+  {
+    "id": "nn_002",
+    "category": "neural_networks",
+    "difficulty": "beginner",
+    "question": "What is a 'neuron' in a neural network?",
+    "options": [
+      "A data storage location",
+      "A connection between layers",
+      "A computational unit processing inputs",
+      "A type of activation function"
+    ],
+    "correctAnswer": 2,
+    "explanation": "An artificial neuron receives inputs, applies weights and a function, and produces an output - mimicking biological neurons conceptually."
+  },
+  {
+    "id": "nn_003",
+    "category": "neural_networks",
+    "difficulty": "beginner",
+    "question": "What is a 'layer' in a neural network?",
+    "options": [
+      "A group of neurons at same depth",
+      "A single neuron",
+      "A connection between neurons",
+      "A training iteration"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A layer is a collection of neurons. Networks have input layers, hidden layers (middle), and output layers."
+  },
+  {
+    "id": "nn_004",
+    "category": "neural_networks",
+    "difficulty": "beginner",
+    "question": "What is 'deep learning'?",
+    "options": [
+      "Learning from unstructured data",
+      "Neural networks with many layers",
+      "Training without supervision",
+      "Processing data in real-time"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Deep learning uses neural networks with multiple hidden layers, allowing them to learn complex patterns and representations."
+  },
+  {
+    "id": "nn_005",
+    "category": "neural_networks",
+    "difficulty": "intermediate",
+    "question": "What does an 'activation function' do?",
+    "options": [
+      "Initializes network weights",
+      "Introduces non-linearity to outputs",
+      "Connects layers together",
+      "Normalizes input data"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Activation functions (like ReLU, sigmoid) add non-linearity, allowing networks to learn complex patterns beyond simple linear relationships."
+  },
+  {
+    "id": "nn_006",
+    "category": "neural_networks",
+    "difficulty": "intermediate",
+    "question": "What is 'backpropagation'?",
+    "options": [
+      "Calculating gradients to adjust weights",
+      "Sending data through the network",
+      "Preprocessing training data",
+      "Validating model outputs"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Backpropagation calculates gradients of the error with respect to each weight, enabling the network to learn by adjusting weights."
+  },
+  {
+    "id": "nn_007",
+    "category": "neural_networks",
+    "difficulty": "intermediate",
+    "question": "What is a 'weight' in neural networks?",
+    "options": [
+      "The size of the model file",
+      "A learnable connection strength",
+      "The number of parameters",
+      "The training data size"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Weights are learnable parameters that determine how much influence one neuron has on another - they're adjusted during training."
+  },
+  {
+    "id": "nn_008",
+    "category": "neural_networks",
+    "difficulty": "intermediate",
+    "question": "What is 'bias' in a neural network (technical)?",
+    "options": [
+      "Unfairness in predictions",
+      "Error in training data",
+      "An added learnable offset parameter",
+      "Preference toward certain outputs"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Bias is a learnable parameter added to the weighted sum before activation, allowing the model to fit data better (separate from fairness bias)."
+  },
+  {
+    "id": "nn_009",
+    "category": "neural_networks",
+    "difficulty": "beginner",
+    "question": "What type of data are CNNs best suited for?",
+    "options": [
+      "Image and visual data",
+      "Tabular spreadsheet data",
+      "Sequential text data",
+      "Time series data"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Convolutional Neural Networks (CNNs) excel at processing grid-like data such as images, using filters to detect visual patterns."
+  },
+  {
+    "id": "nn_010",
+    "category": "neural_networks",
+    "difficulty": "intermediate",
+    "question": "What does CNN stand for in deep learning?",
+    "options": [
+      "Convolutional Neural Network",
+      "Connected Neural Network",
+      "Clustered Neural Network",
+      "Computed Neural Network"
+    ],
+    "correctAnswer": 0,
+    "explanation": "CNN stands for Convolutional Neural Network - designed for processing structured grid data like images."
+  },
+  {
+    "id": "nn_011",
+    "category": "neural_networks",
+    "difficulty": "intermediate",
+    "question": "What type of data are RNNs designed for?",
+    "options": [
+      "Static images",
+      "Graph-structured data",
+      "Tabular data",
+      "Sequential data like text"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Recurrent Neural Networks (RNNs) are designed for sequential data, maintaining memory of previous inputs - useful for text and time series."
+  },
+  {
+    "id": "nn_012",
+    "category": "neural_networks",
+    "difficulty": "advanced",
+    "question": "What problem do LSTMs address that basic RNNs have?",
+    "options": [
+      "Slow training speed",
+      "Vanishing gradients over long sequences",
+      "High memory usage",
+      "Difficulty with images"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Long Short-Term Memory (LSTM) networks use gates to better preserve information over long sequences, addressing vanishing gradients."
+  },
+  {
+    "id": "nn_013",
+    "category": "neural_networks",
+    "difficulty": "intermediate",
+    "question": "What is 'dropout' in neural networks?",
+    "options": [
+      "Removing low-quality data",
+      "Randomly deactivating neurons during training",
+      "Stopping training early",
+      "Removing unnecessary layers"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Dropout randomly 'turns off' neurons during training, forcing the network to learn robust features and reducing overfitting."
+  },
+  {
+    "id": "nn_014",
+    "category": "neural_networks",
+    "difficulty": "intermediate",
+    "question": "What is 'batch size' in neural network training?",
+    "options": [
+      "Total number of training examples",
+      "Samples processed before weight update",
+      "Number of layers in network",
+      "Size of the model in memory"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Batch size is how many training examples are used in one iteration before the model updates its weights."
+  },
+  {
+    "id": "nn_015",
+    "category": "neural_networks",
+    "difficulty": "intermediate",
+    "question": "What is an 'epoch' in training?",
+    "options": [
+      "One batch of training examples",
+      "A single weight update step",
+      "One pass through all training data",
+      "The final training phase"
+    ],
+    "correctAnswer": 2,
+    "explanation": "An epoch is one complete cycle through all training data. Models typically train for multiple epochs to learn patterns thoroughly."
+  },
+  {
+    "id": "nn_016",
+    "category": "neural_networks",
+    "difficulty": "intermediate",
+    "question": "What does 'learning rate' control?",
+    "options": [
+      "Number of training epochs",
+      "Amount of training data used",
+      "Size of weight adjustments",
+      "Number of neurons per layer"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Learning rate determines step size during optimization - too high causes overshooting, too low causes slow training."
+  },
+  {
+    "id": "nn_017",
+    "category": "neural_networks",
+    "difficulty": "advanced",
+    "question": "What is 'transfer learning'?",
+    "options": [
+      "Moving data between systems",
+      "Reusing a pre-trained model for new tasks",
+      "Converting model formats",
+      "Sharing weights between layers"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Transfer learning reuses a model trained on one task as the starting point for another, saving time and requiring less data."
+  },
+  {
+    "id": "nn_018",
+    "category": "neural_networks",
+    "difficulty": "advanced",
+    "question": "What is 'fine-tuning' a model?",
+    "options": [
+      "Adjusting hyperparameters",
+      "Further training on domain-specific data",
+      "Reducing model size",
+      "Debugging model errors"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Fine-tuning takes a pre-trained model and continues training on domain-specific data to adapt it for a particular use case."
+  },
+  {
+    "id": "llm_001",
+    "category": "llms_and_transformers",
+    "difficulty": "beginner",
+    "question": "What does LLM stand for?",
+    "options": [
+      "Large Language Model",
+      "Learned Logic Module",
+      "Linear Learning Machine",
+      "Layered Linguistic Model"
+    ],
+    "correctAnswer": 0,
+    "explanation": "LLM stands for Large Language Model - AI systems trained on vast text data to understand and generate human language."
+  },
+  {
+    "id": "llm_002",
+    "category": "llms_and_transformers",
+    "difficulty": "beginner",
+    "question": "What does GPT stand for?",
+    "options": [
+      "Generative Pre-trained Transformer",
+      "General Processing Technology",
+      "Guided Pattern Training",
+      "Graph Processing Tool"
+    ],
+    "correctAnswer": 0,
+    "explanation": "GPT stands for Generative Pre-trained Transformer - OpenAI's family of large language models."
+  },
+  {
+    "id": "llm_003",
+    "category": "llms_and_transformers",
+    "difficulty": "intermediate",
+    "question": "What key mechanism do transformers use?",
+    "options": [
+      "Self-attention mechanisms",
+      "Recurrent connections",
+      "Convolutional filters",
+      "Memory cells"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Transformers use attention mechanisms to process all parts of input simultaneously, revolutionizing NLP since the 2017 'Attention Is All You Need' paper."
+  },
+  {
+    "id": "llm_004",
+    "category": "llms_and_transformers",
+    "difficulty": "intermediate",
+    "question": "What does 'attention' do in transformers?",
+    "options": [
+      "Filters out irrelevant data",
+      "Speeds up processing",
+      "Weighs importance of input parts",
+      "Compresses the input"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Attention allows the model to focus on relevant parts of the input when producing output, understanding relationships between words regardless of distance."
+  },
+  {
+    "id": "llm_005",
+    "category": "llms_and_transformers",
+    "difficulty": "beginner",
+    "question": "What is a 'token' in LLMs?",
+    "options": [
+      "A unit of text the model processes",
+      "An authentication credential",
+      "A model parameter",
+      "A training example"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Tokens are the basic units LLMs work with - typically words or parts of words. 'ChatGPT' might be 2-3 tokens."
+  },
+  {
+    "id": "llm_006",
+    "category": "llms_and_transformers",
+    "difficulty": "intermediate",
+    "question": "What is a 'context window' in LLMs?",
+    "options": [
+      "The training data source",
+      "The output generation limit",
+      "The model's memory storage",
+      "Maximum tokens processed at once"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The context window is the maximum number of tokens an LLM can process in a single interaction - larger windows allow longer conversations."
+  },
+  {
+    "id": "llm_007",
+    "category": "llms_and_transformers",
+    "difficulty": "intermediate",
+    "question": "What is 'tokenization'?",
+    "options": [
+      "Encrypting model outputs",
+      "Validating input format",
+      "Breaking text into processable units",
+      "Compressing text data"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Tokenization converts raw text into tokens (numerical representations) that the model can understand and process."
+  },
+  {
+    "id": "llm_008",
+    "category": "llms_and_transformers",
+    "difficulty": "intermediate",
+    "question": "What does 'temperature' control in LLM outputs?",
+    "options": [
+      "Response length",
+      "Output randomness/creativity",
+      "Processing speed",
+      "Accuracy of facts"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Temperature controls output randomness - low temperature (0) is deterministic/focused, high temperature is more random/creative."
+  },
+  {
+    "id": "llm_009",
+    "category": "llms_and_transformers",
+    "difficulty": "intermediate",
+    "question": "What is 'hallucination' in LLMs?",
+    "options": [
+      "Generating confident but false information",
+      "Creative storytelling ability",
+      "Processing visual inputs",
+      "Forgetting previous context"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Hallucination is when an LLM generates plausible-sounding but factually incorrect or fabricated information."
+  },
+  {
+    "id": "llm_010",
+    "category": "llms_and_transformers",
+    "difficulty": "beginner",
+    "question": "What company created Claude?",
+    "options": [
+      "Anthropic",
+      "Google",
+      "OpenAI",
+      "Meta"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Claude was created by Anthropic, an AI safety company founded in 2021."
+  },
+  {
+    "id": "llm_011",
+    "category": "llms_and_transformers",
+    "difficulty": "beginner",
+    "question": "What is Google's flagship LLM family called?",
+    "options": [
+      "Bard",
+      "LaMDA",
+      "PaLM",
+      "Gemini"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Gemini is Google's current flagship LLM family, replacing/rebranding from Bard in early 2024."
+  },
+  {
+    "id": "llm_012",
+    "category": "llms_and_transformers",
+    "difficulty": "intermediate",
+    "question": "What is 'pre-training' for LLMs?",
+    "options": [
+      "Testing before deployment",
+      "Collecting training data",
+      "Setting up hardware infrastructure",
+      "Initial training on large text corpora"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Pre-training exposes the model to massive text corpora to learn language patterns, grammar, facts, and reasoning - before task-specific training."
+  },
+  {
+    "id": "llm_013",
+    "category": "llms_and_transformers",
+    "difficulty": "intermediate",
+    "question": "What does RLHF stand for?",
+    "options": [
+      "Reinforcement Learning from Human Feedback",
+      "Rapid Learning for High Fidelity",
+      "Recursive Language for Hybrid Functions",
+      "Real-time Learning for Helpful Features"
+    ],
+    "correctAnswer": 0,
+    "explanation": "RLHF trains models using human preferences to make outputs more helpful, harmless, and honest - crucial for aligning LLMs with human values."
+  },
+  {
+    "id": "llm_014",
+    "category": "llms_and_transformers",
+    "difficulty": "advanced",
+    "question": "What is 'Constitutional AI'?",
+    "options": [
+      "AI for legal applications",
+      "Training AI with guiding principles",
+      "Government-regulated AI",
+      "AI with legal rights"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Constitutional AI is Anthropic's approach where AI is trained to follow a set of principles, allowing it to self-improve its responses."
+  },
+  {
+    "id": "llm_015",
+    "category": "llms_and_transformers",
+    "difficulty": "intermediate",
+    "question": "What is an 'embedding' in NLP?",
+    "options": [
+      "Inserting text into documents",
+      "A model integration method",
+      "A numerical vector representing meaning",
+      "A text compression technique"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Embeddings convert text into dense numerical vectors where similar meanings are close together in vector space - essential for search and comparison."
+  },
+  {
+    "id": "llm_016",
+    "category": "llms_and_transformers",
+    "difficulty": "intermediate",
+    "question": "What is 'semantic search'?",
+    "options": [
+      "Search using exact keywords",
+      "Search within databases",
+      "Search based on meaning similarity",
+      "Search with filters"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Semantic search understands the intent and meaning behind queries, finding relevant results even without exact keyword matches."
+  },
+  {
+    "id": "llm_017",
+    "category": "llms_and_transformers",
+    "difficulty": "advanced",
+    "question": "What does RAG stand for?",
+    "options": [
+      "Ranked Attribute Grading",
+      "Rapid Answer Generation",
+      "Retrieval-Augmented Generation",
+      "Recursive Algorithm Growth"
+    ],
+    "correctAnswer": 2,
+    "explanation": "RAG combines LLMs with external knowledge retrieval, allowing models to access and cite specific information beyond their training data."
+  },
+  {
+    "id": "llm_018",
+    "category": "llms_and_transformers",
+    "difficulty": "intermediate",
+    "question": "What is a 'system prompt'?",
+    "options": [
+      "Error messages from the system",
+      "User's first message",
+      "Instructions defining AI behavior",
+      "Model's internal logs"
+    ],
+    "correctAnswer": 2,
+    "explanation": "System prompts are initial instructions that set the AI's persona, capabilities, and constraints before user interaction begins."
+  },
+  {
+    "id": "llm_019",
+    "category": "llms_and_transformers",
+    "difficulty": "beginner",
+    "question": "What is 'multimodal AI'?",
+    "options": [
+      "AI with multiple versions",
+      "AI with multiple use cases",
+      "AI running on multiple servers",
+      "AI processing text, images, and audio"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Multimodal AI can understand and generate multiple types of content - text, images, audio, video - in a single model."
+  },
+  {
+    "id": "llm_020",
+    "category": "llms_and_transformers",
+    "difficulty": "intermediate",
+    "question": "What are 'parameters' in '175 billion parameter model'?",
+    "options": [
+      "Configuration settings",
+      "Learnable weights and biases",
+      "Training examples used",
+      "API options"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Parameters are the weights and biases learned during training - more parameters generally means more capacity to learn complex patterns."
+  },
+  {
+    "id": "llm_021",
+    "category": "llms_and_transformers",
+    "difficulty": "advanced",
+    "question": "What is 'quantization' in LLMs?",
+    "options": [
+      "Reducing numerical precision of weights",
+      "Measuring model quality",
+      "Counting total parameters",
+      "Splitting model across GPUs"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Quantization reduces the precision of model weights (e.g., 32-bit to 8-bit), significantly reducing size and compute needs with minimal quality loss."
+  },
+  {
+    "id": "prompt_001",
+    "category": "prompt_engineering",
+    "difficulty": "beginner",
+    "question": "What is 'prompt engineering'?",
+    "options": [
+      "Building AI hardware",
+      "Testing AI systems",
+      "Writing AI source code",
+      "Designing effective AI inputs"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Prompt engineering is the skill of designing inputs that effectively communicate your intent to AI systems for optimal outputs."
+  },
+  {
+    "id": "prompt_002",
+    "category": "prompt_engineering",
+    "difficulty": "beginner",
+    "question": "What is 'zero-shot' prompting?",
+    "options": [
+      "Prompting with constraints",
+      "Prompting with multiple examples",
+      "Prompting with step-by-step reasoning",
+      "Prompting without any examples"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Zero-shot means asking the AI to do something without giving examples - relying on its pre-trained knowledge to understand the task."
+  },
+  {
+    "id": "prompt_003",
+    "category": "prompt_engineering",
+    "difficulty": "beginner",
+    "question": "What is 'few-shot' prompting?",
+    "options": [
+      "Asking without any context",
+      "Limiting response length",
+      "Using very short prompts",
+      "Providing examples before the task"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Few-shot prompting includes a few examples of the desired input-output pattern before the actual request, helping the AI understand the format."
+  },
+  {
+    "id": "prompt_004",
+    "category": "prompt_engineering",
+    "difficulty": "intermediate",
+    "question": "What is 'chain-of-thought' prompting?",
+    "options": [
+      "Linking multiple AI models",
+      "Connecting related topics",
+      "Sending prompts in sequence",
+      "Asking AI to explain reasoning steps"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Chain-of-thought prompting asks the model to show its reasoning process, often improving accuracy on complex problems."
+  },
+  {
+    "id": "prompt_005",
+    "category": "prompt_engineering",
+    "difficulty": "beginner",
+    "question": "What typically produces better AI outputs?",
+    "options": [
+      "Vague open-ended prompts",
+      "Prompts without context",
+      "Single-word prompts",
+      "Specific detailed prompts"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Specific prompts with clear context, format requirements, and constraints typically produce more useful and relevant outputs."
+  },
+  {
+    "id": "prompt_006",
+    "category": "prompt_engineering",
+    "difficulty": "intermediate",
+    "question": "What is 'role prompting'?",
+    "options": [
+      "Defining user permissions",
+      "Setting access levels",
+      "Assigning team roles",
+      "Asking AI to act as a persona"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Role prompting tells the AI to act as a specific expert or persona (e.g., 'You are a senior software engineer'), shaping response style and expertise."
+  },
+  {
+    "id": "prompt_007",
+    "category": "prompt_engineering",
+    "difficulty": "intermediate",
+    "question": "What is a 'delimiter' in prompts?",
+    "options": [
+      "Characters separating sections",
+      "A word limit setting",
+      "A response timeout",
+      "A content filter"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Delimiters (like ```, ###, or XML tags) clearly separate instructions from content, preventing confusion and injection attacks."
+  },
+  {
+    "id": "prompt_008",
+    "category": "prompt_engineering",
+    "difficulty": "intermediate",
+    "question": "Why specify output format in prompts?",
+    "options": [
+      "To reduce processing time",
+      "To reduce costs",
+      "To limit AI creativity",
+      "To get consistent parseable results"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Specifying format (JSON, bullet points, table, etc.) ensures outputs are consistent and can be easily parsed or used downstream."
+  },
+  {
+    "id": "prompt_009",
+    "category": "prompt_engineering",
+    "difficulty": "intermediate",
+    "question": "What is 'prompt injection'?",
+    "options": [
+      "Malicious text overriding instructions",
+      "Adding variables to prompts",
+      "Dynamically generating prompts",
+      "Inserting code into outputs"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Prompt injection is when attackers embed instructions in user input to override the system prompt or manipulate AI behavior."
+  },
+  {
+    "id": "prompt_010",
+    "category": "prompt_engineering",
+    "difficulty": "beginner",
+    "question": "What does 'iterating on prompts' mean?",
+    "options": [
+      "Repeating the same prompt",
+      "Refining prompts based on outputs",
+      "Running prompts in loops",
+      "Numbering prompt versions"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Iteration means testing prompts, analyzing outputs, and making adjustments to improve results - prompt engineering is an iterative process."
+  },
+  {
+    "id": "prompt_011",
+    "category": "prompt_engineering",
+    "difficulty": "intermediate",
+    "question": "What is a 'negative prompt'?",
+    "options": [
+      "A poorly written prompt",
+      "A prompt that fails",
+      "Instructions on what to avoid",
+      "A critical feedback prompt"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Negative prompts explicitly state what to avoid, helping prevent unwanted content - especially useful in image generation."
+  },
+  {
+    "id": "prompt_012",
+    "category": "prompt_engineering",
+    "difficulty": "advanced",
+    "question": "What is 'tree of thoughts' prompting?",
+    "options": [
+      "Creating hierarchical outlines",
+      "Branching conversation flows",
+      "Exploring multiple reasoning paths",
+      "Organizing related prompts"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Tree of thoughts has the AI consider multiple reasoning branches, evaluate them, and choose the best path - improving complex problem-solving."
+  },
+  {
+    "id": "prompt_013",
+    "category": "prompt_engineering",
+    "difficulty": "intermediate",
+    "question": "Why is context important in prompts?",
+    "options": [
+      "It helps AI tailor responses",
+      "It increases word count",
+      "It's required by the API",
+      "It improves processing speed"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Context (background, purpose, audience) helps AI tailor responses to your specific situation rather than giving generic answers."
+  },
+  {
+    "id": "prompt_014",
+    "category": "prompt_engineering",
+    "difficulty": "beginner",
+    "question": "What is 'prompt chaining'?",
+    "options": [
+      "Restricting prompt access",
+      "Using output as next input",
+      "Linking multiple AI models",
+      "Securing prompt data"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Prompt chaining breaks complex tasks into steps, where each prompt's output feeds into the next - enabling sophisticated workflows."
+  },
+  {
+    "id": "prompt_015",
+    "category": "prompt_engineering",
+    "difficulty": "advanced",
+    "question": "What is 'self-consistency' prompting?",
+    "options": [
+      "Making prompts repeatable",
+      "Validating prompt logic",
+      "Ensuring format consistency",
+      "Running multiple times and picking consensus"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Self-consistency runs the same prompt multiple times and selects the answer that appears most frequently, improving reliability."
+  },
+  {
+    "id": "tools_001",
+    "category": "ai_tools_ecosystem",
+    "difficulty": "beginner",
+    "question": "What is an AI API?",
+    "options": [
+      "An AI-powered website",
+      "Programmatic access to AI capabilities",
+      "An AI user interface",
+      "An AI training platform"
+    ],
+    "correctAnswer": 1,
+    "explanation": "An API (Application Programming Interface) lets developers integrate AI capabilities into their own applications through code."
+  },
+  {
+    "id": "tools_002",
+    "category": "ai_tools_ecosystem",
+    "difficulty": "beginner",
+    "question": "What is Hugging Face?",
+    "options": [
+      "A platform for sharing AI models",
+      "An AI research lab",
+      "A chatbot company",
+      "A cloud computing service"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Hugging Face is the leading platform for open-source AI, hosting thousands of models, datasets, and tools for the ML community."
+  },
+  {
+    "id": "tools_003",
+    "category": "ai_tools_ecosystem",
+    "difficulty": "intermediate",
+    "question": "What is LangChain?",
+    "options": [
+      "A blockchain for AI",
+      "A translation service",
+      "A programming language",
+      "A framework for building LLM apps"
+    ],
+    "correctAnswer": 3,
+    "explanation": "LangChain is a framework that simplifies building LLM-powered applications with features like chaining, memory, and tool integration."
+  },
+  {
+    "id": "tools_004",
+    "category": "ai_tools_ecosystem",
+    "difficulty": "intermediate",
+    "question": "What is a 'vector database'?",
+    "options": [
+      "A database for storing embeddings",
+      "A graphical database",
+      "A relational database type",
+      "A time-series database"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Vector databases (like Pinecone, Weaviate, ChromaDB) efficiently store and search embedding vectors for semantic similarity search."
+  },
+  {
+    "id": "tools_005",
+    "category": "ai_tools_ecosystem",
+    "difficulty": "beginner",
+    "question": "What does DALL-E do?",
+    "options": [
+      "Generates images from text",
+      "Transcribes audio to text",
+      "Translates between languages",
+      "Analyzes data patterns"
+    ],
+    "correctAnswer": 0,
+    "explanation": "DALL-E is OpenAI's image generation model that creates images from text prompts - named as a portmanteau of Dal\u00ed and WALL-E."
+  },
+  {
+    "id": "tools_006",
+    "category": "ai_tools_ecosystem",
+    "difficulty": "beginner",
+    "question": "What is Midjourney used for?",
+    "options": [
+      "AI image generation",
+      "Code generation",
+      "Document analysis",
+      "Data visualization"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Midjourney is a popular AI image generation tool known for its artistic, stylized outputs, accessed primarily through Discord."
+  },
+  {
+    "id": "tools_007",
+    "category": "ai_tools_ecosystem",
+    "difficulty": "beginner",
+    "question": "What is GitHub Copilot?",
+    "options": [
+      "A version control system",
+      "A project management tool",
+      "A code hosting platform",
+      "An AI coding assistant"
+    ],
+    "correctAnswer": 3,
+    "explanation": "GitHub Copilot is an AI pair programmer that suggests code completions, functions, and even entire files based on context."
+  },
+  {
+    "id": "tools_008",
+    "category": "ai_tools_ecosystem",
+    "difficulty": "intermediate",
+    "question": "What is Stable Diffusion?",
+    "options": [
+      "A cloud computing service",
+      "An open-source image generation model",
+      "A data processing pipeline",
+      "A model deployment tool"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Stable Diffusion is an open-source image generation model that can run locally, enabling customization and fine-tuning."
+  },
+  {
+    "id": "tools_009",
+    "category": "ai_tools_ecosystem",
+    "difficulty": "intermediate",
+    "question": "What is an 'AI agent'?",
+    "options": [
+      "An AI that can take autonomous actions",
+      "A human AI researcher",
+      "A customer service chatbot only",
+      "An AI sales representative"
+    ],
+    "correctAnswer": 0,
+    "explanation": "AI agents are systems that can perceive, decide, and act autonomously to achieve goals - going beyond simple Q&A to executing tasks."
+  },
+  {
+    "id": "tools_010",
+    "category": "ai_tools_ecosystem",
+    "difficulty": "intermediate",
+    "question": "What does 'open-source' mean for AI models?",
+    "options": [
+      "The AI is free to use commercially",
+      "Anyone can modify the AI in real-time",
+      "The model weights are publicly available",
+      "The AI has no usage restrictions"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Open-source AI means the model weights, code, or both are publicly available for inspection, use, and modification by the community."
+  },
+  {
+    "id": "tools_011",
+    "category": "ai_tools_ecosystem",
+    "difficulty": "intermediate",
+    "question": "What is Llama in AI?",
+    "options": [
+      "A language processing technique",
+      "Meta's open-source LLM family",
+      "A model training framework",
+      "An AI research organization"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Llama is Meta's family of open-source LLMs, enabling researchers and developers to build on powerful foundation models."
+  },
+  {
+    "id": "tools_012",
+    "category": "ai_tools_ecosystem",
+    "difficulty": "advanced",
+    "question": "What is 'model serving'?",
+    "options": [
+      "Training models on data",
+      "Evaluating model performance",
+      "Sharing model architectures",
+      "Deploying models for real-time inference"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Model serving is the infrastructure and process of deploying trained models to production where they can respond to real-time requests."
+  },
+  {
+    "id": "tools_013",
+    "category": "ai_tools_ecosystem",
+    "difficulty": "intermediate",
+    "question": "What is OpenAI's Whisper?",
+    "options": [
+      "A text-to-speech model",
+      "A speech recognition model",
+      "A language translation model",
+      "An image generation model"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Whisper is OpenAI's automatic speech recognition system that can transcribe and translate audio in multiple languages."
+  },
+  {
+    "id": "tools_014",
+    "category": "ai_tools_ecosystem",
+    "difficulty": "intermediate",
+    "question": "What is 'function calling' in AI APIs?",
+    "options": [
+      "Internal API operations",
+      "Callback functions in code",
+      "AI requesting specific tool execution",
+      "Error handling procedures"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Function calling lets LLMs output structured requests to call specific functions, enabling integration with external tools and APIs."
+  },
+  {
+    "id": "tools_015",
+    "category": "ai_tools_ecosystem",
+    "difficulty": "advanced",
+    "question": "What is ONNX?",
+    "options": [
+      "A neural network type",
+      "An open format for ML models",
+      "An AI training library",
+      "A cloud AI platform"
+    ],
+    "correctAnswer": 1,
+    "explanation": "ONNX (Open Neural Network Exchange) is a standard format allowing models to be transferred between different ML frameworks."
+  },
+  {
+    "id": "ethics_001",
+    "category": "ethics_and_safety",
+    "difficulty": "beginner",
     "question": "What is 'AI bias'?",
     "options": [
-      { "id": "a", "text": "When AI prefers certain programming languages" },
-      { "id": "b", "text": "When AI systems produce unfair outcomes for certain groups" },
-      { "id": "c", "text": "When AI runs slowly" },
-      { "id": "d", "text": "When AI uses too much memory" }
+      "AI preferring certain algorithms",
+      "AI processing errors",
+      "Systematic unfairness in AI outputs",
+      "AI performance variations"
     ],
-    "correctOptionId": "b",
-    "difficulty": "easy"
+    "correctAnswer": 2,
+    "explanation": "AI bias occurs when systems produce unfair outcomes due to biased training data, flawed design, or societal prejudices encoded in the data."
   },
   {
-    "id": "eth-002",
-    "category": "AI Ethics & Applications",
-    "question": "What is 'explainable AI' (XAI)?",
-    "options": [
-      { "id": "a", "text": "AI that can teach programming" },
-      { "id": "b", "text": "AI systems whose decisions can be understood by humans" },
-      { "id": "c", "text": "AI that explains jokes" },
-      { "id": "d", "text": "AI with simple architectures" }
-    ],
-    "correctOptionId": "b",
-    "difficulty": "medium"
-  },
-  {
-    "id": "eth-003",
-    "category": "AI Ethics & Applications",
-    "question": "What is a major concern with deepfakes?",
-    "options": [
-      { "id": "a", "text": "They use too much computing power" },
-      { "id": "b", "text": "They can spread misinformation and harm trust" },
-      { "id": "c", "text": "They are difficult to create" },
-      { "id": "d", "text": "They only work with text" }
-    ],
-    "correctOptionId": "b",
-    "difficulty": "easy"
-  },
-  {
-    "id": "eth-004",
-    "category": "AI Ethics & Applications",
+    "id": "ethics_002",
+    "category": "ethics_and_safety",
+    "difficulty": "beginner",
     "question": "What is 'AI alignment'?",
     "options": [
-      { "id": "a", "text": "Arranging AI models in sequence" },
-      { "id": "b", "text": "Ensuring AI systems act according to human values and intentions" },
-      { "id": "c", "text": "Aligning text in AI outputs" },
-      { "id": "d", "text": "Synchronizing multiple AI models" }
+      "Coordinating multiple AI systems",
+      "Aligning AI with regulations",
+      "Ensuring AI acts per human values",
+      "Synchronizing AI outputs"
     ],
-    "correctOptionId": "b",
-    "difficulty": "medium"
+    "correctAnswer": 2,
+    "explanation": "AI alignment is the challenge of ensuring AI systems understand and pursue the goals humans actually want, not unintended objectives."
   },
   {
-    "id": "eth-005",
-    "category": "AI Ethics & Applications",
-    "question": "What is 'data privacy' in the context of AI?",
+    "id": "ethics_003",
+    "category": "ethics_and_safety",
+    "difficulty": "intermediate",
+    "question": "What is 'explainable AI' (XAI)?",
     "options": [
-      { "id": "a", "text": "Keeping AI code secret" },
-      { "id": "b", "text": "Protecting personal information used in AI training and inference" },
-      { "id": "c", "text": "Hiding AI from users" },
-      { "id": "d", "text": "Encrypting AI models" }
+      "AI that generates explanations",
+      "AI documentation standards",
+      "AI whose decisions can be understood",
+      "AI user tutorials"
     ],
-    "correctOptionId": "b",
-    "difficulty": "easy"
+    "correctAnswer": 2,
+    "explanation": "Explainable AI focuses on making AI decisions interpretable and understandable to humans, crucial for trust and accountability."
   },
   {
-    "id": "eth-006",
-    "category": "AI Ethics & Applications",
-    "question": "What is 'RLHF' in AI development?",
+    "id": "ethics_004",
+    "category": "ethics_and_safety",
+    "difficulty": "beginner",
+    "question": "What is a 'deepfake'?",
     "options": [
-      { "id": "a", "text": "Rapid Learning for High Fidelity" },
-      { "id": "b", "text": "Reinforcement Learning from Human Feedback" },
-      { "id": "c", "text": "Recursive Language for High Frequency" },
-      { "id": "d", "text": "Reliable Learning for Hardware Functions" }
+      "A deep learning model type",
+      "AI-generated fake media of real people",
+      "A security vulnerability",
+      "A data augmentation technique"
     ],
-    "correctOptionId": "b",
-    "difficulty": "hard"
+    "correctAnswer": 1,
+    "explanation": "Deepfakes are synthetic media where AI replaces one person's likeness with another's, raising concerns about misinformation and consent."
+  },
+  {
+    "id": "ethics_005",
+    "category": "ethics_and_safety",
+    "difficulty": "intermediate",
+    "question": "What is 'AI safety' research focused on?",
+    "options": [
+      "Cybersecurity for AI systems",
+      "Physical safety of AI hardware",
+      "Preventing AI from causing harm",
+      "Data backup procedures"
+    ],
+    "correctAnswer": 2,
+    "explanation": "AI safety research focuses on preventing harmful outcomes from AI systems, from immediate risks to long-term existential concerns."
+  },
+  {
+    "id": "ethics_006",
+    "category": "ethics_and_safety",
+    "difficulty": "intermediate",
+    "question": "What is 'data privacy' in AI context?",
+    "options": [
+      "Encrypting AI outputs",
+      "Protecting personal info used in AI",
+      "Keeping AI models proprietary",
+      "Securing API credentials"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Data privacy concerns how personal information is collected, used in training, stored, and protected throughout the AI lifecycle."
+  },
+  {
+    "id": "ethics_007",
+    "category": "ethics_and_safety",
+    "difficulty": "intermediate",
+    "question": "What is 'model poisoning'?",
+    "options": [
+      "Corrupting AI hardware",
+      "Exploiting API vulnerabilities",
+      "Overloading AI servers",
+      "Injecting malicious training data"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Model poisoning is an attack where adversaries inject malicious data into training to cause the model to behave incorrectly."
+  },
+  {
+    "id": "ethics_008",
+    "category": "ethics_and_safety",
+    "difficulty": "advanced",
+    "question": "What is 'AI governance'?",
+    "options": [
+      "AI managing organizations",
+      "Government use of AI",
+      "Rules and policies for responsible AI",
+      "AI decision-making systems"
+    ],
+    "correctAnswer": 2,
+    "explanation": "AI governance encompasses the rules, practices, and processes for ensuring AI is developed and used responsibly and ethically."
+  },
+  {
+    "id": "ethics_009",
+    "category": "ethics_and_safety",
+    "difficulty": "intermediate",
+    "question": "What is 'algorithmic fairness'?",
+    "options": [
+      "AI treating groups equitably",
+      "Equal computing resources",
+      "Fair AI pricing",
+      "Balanced training data"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Algorithmic fairness means AI systems should not discriminate against individuals or groups based on protected characteristics."
+  },
+  {
+    "id": "ethics_010",
+    "category": "ethics_and_safety",
+    "difficulty": "advanced",
+    "question": "What is 'AI red teaming'?",
+    "options": [
+      "Competitive AI development",
+      "AI performance benchmarking",
+      "Adversarial testing for vulnerabilities",
+      "Collaborative AI research"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Red teaming involves adversarial testing to find ways AI can be manipulated or produce harmful outputs before deployment."
+  },
+  {
+    "id": "ethics_011",
+    "category": "ethics_and_safety",
+    "difficulty": "beginner",
+    "question": "Why is diverse training data important?",
+    "options": [
+      "It helps reduce bias across groups",
+      "It increases dataset size",
+      "It speeds up training",
+      "It reduces storage costs"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Diverse data helps AI learn to serve all users fairly and accurately, avoiding bias toward majority groups in the training data."
+  },
+  {
+    "id": "ethics_012",
+    "category": "ethics_and_safety",
+    "difficulty": "intermediate",
+    "question": "What is 'consent' in AI data collection?",
+    "options": [
+      "Permission to use someone's data",
+      "AI agreeing to tasks",
+      "Model license agreements",
+      "API terms of service"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Consent means individuals knowingly agree to have their data collected and used for AI training, a key ethical and legal requirement."
+  },
+  {
+    "id": "apps_001",
+    "category": "practical_applications",
+    "difficulty": "beginner",
+    "question": "What AI features do email apps commonly use?",
+    "options": [
+      "Email encryption",
+      "Spam filtering and smart compose",
+      "Contact management",
+      "Calendar integration"
+    ],
+    "correctAnswer": 1,
+    "explanation": "AI powers features like Gmail's Smart Compose, spam detection, and automatic email categorization into Primary/Social/Promotions."
+  },
+  {
+    "id": "apps_002",
+    "category": "practical_applications",
+    "difficulty": "beginner",
+    "question": "How does Netflix primarily use AI?",
+    "options": [
+      "Creating original content",
+      "Managing subscriptions",
+      "Personalizing content recommendations",
+      "Processing payments"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Netflix uses AI to analyze viewing patterns and recommend content, personalize thumbnails, and optimize streaming quality."
+  },
+  {
+    "id": "apps_003",
+    "category": "practical_applications",
+    "difficulty": "beginner",
+    "question": "What can AI image recognition identify?",
+    "options": [
+      "Only human faces",
+      "Only text in images",
+      "Objects, scenes, text, and faces",
+      "Only specific objects"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Image recognition identifies content in images - powering features from photo search to medical diagnosis to autonomous vehicles."
+  },
+  {
+    "id": "apps_004",
+    "category": "practical_applications",
+    "difficulty": "intermediate",
+    "question": "What does 'sentiment analysis' determine?",
+    "options": [
+      "Grammar correctness",
+      "Reading difficulty level",
+      "Language translation quality",
+      "Emotional tone of text"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Sentiment analysis determines whether text expresses positive, negative, or neutral sentiment - used in brand monitoring and customer feedback."
+  },
+  {
+    "id": "apps_005",
+    "category": "practical_applications",
+    "difficulty": "beginner",
+    "question": "What AI capabilities do virtual assistants use?",
+    "options": [
+      "Speech recognition and intent understanding",
+      "Only voice recording",
+      "Only timer functions",
+      "Only music playback"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Virtual assistants use AI for speech-to-text, understanding intent, generating responses, and executing commands across services."
+  },
+  {
+    "id": "apps_006",
+    "category": "practical_applications",
+    "difficulty": "intermediate",
+    "question": "What is 'predictive maintenance'?",
+    "options": [
+      "Scheduled regular maintenance",
+      "Preventive software updates",
+      "Maintaining prediction models",
+      "AI predicting equipment failures"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Predictive maintenance uses AI to analyze sensor data and predict equipment failures, enabling proactive repairs and reducing downtime."
+  },
+  {
+    "id": "apps_007",
+    "category": "practical_applications",
+    "difficulty": "intermediate",
+    "question": "How does AI help with fraud detection?",
+    "options": [
+      "Blocking all transactions",
+      "Analyzing patterns for anomalies",
+      "Requiring manual review",
+      "Adding security questions"
+    ],
+    "correctAnswer": 1,
+    "explanation": "AI fraud detection analyzes transaction patterns, user behavior, and contextual signals to flag suspicious activity instantly."
+  },
+  {
+    "id": "apps_008",
+    "category": "practical_applications",
+    "difficulty": "intermediate",
+    "question": "What is 'computer vision'?",
+    "options": [
+      "Display monitor technology",
+      "Video conferencing software",
+      "AI understanding visual information",
+      "Graphics processing"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Computer vision gives machines the ability to see and understand images and videos - enabling applications from self-driving cars to medical imaging."
+  },
+  {
+    "id": "apps_009",
+    "category": "practical_applications",
+    "difficulty": "intermediate",
+    "question": "What does NLP stand for in AI?",
+    "options": [
+      "Neural Layer Processing",
+      "Node Linking Procedure",
+      "Network Learning Protocol",
+      "Natural Language Processing"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Natural Language Processing enables AI to understand, interpret, and generate human language - the technology behind chatbots and translation."
+  },
+  {
+    "id": "apps_010",
+    "category": "practical_applications",
+    "difficulty": "beginner",
+    "question": "What does an AI chatbot do?",
+    "options": [
+      "Only answers FAQs",
+      "Simulates human conversation",
+      "Only routes to humans",
+      "Only collects data"
+    ],
+    "correctAnswer": 1,
+    "explanation": "AI chatbots are programs that use NLP and ML to understand user messages and generate relevant responses in conversation."
+  },
+  {
+    "id": "apps_011",
+    "category": "practical_applications",
+    "difficulty": "intermediate",
+    "question": "How is AI used in healthcare diagnostics?",
+    "options": [
+      "Replacing doctors entirely",
+      "Processing insurance claims",
+      "Managing patient schedules",
+      "Analyzing medical images for conditions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "AI assists diagnostics by analyzing X-rays, MRIs, pathology slides, and patient data to help detect diseases like cancer earlier."
+  },
+  {
+    "id": "apps_012",
+    "category": "practical_applications",
+    "difficulty": "beginner",
+    "question": "How does AI improve web search?",
+    "options": [
+      "Understanding query meaning and intent",
+      "Faster page loading",
+      "Better website design",
+      "More advertisements"
+    ],
+    "correctAnswer": 0,
+    "explanation": "AI-powered search uses ML to understand query intent, improve relevance, and even generate direct answers rather than just links."
+  },
+  {
+    "id": "apps_013",
+    "category": "practical_applications",
+    "difficulty": "intermediate",
+    "question": "What does autonomous driving Level 2 mean?",
+    "options": [
+      "Fully self-driving capability",
+      "AI controls steering and speed together",
+      "Only cruise control",
+      "Remote human operation"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Level 2 means the car can control both steering and speed simultaneously, but the driver must stay engaged - like Tesla Autopilot."
+  },
+  {
+    "id": "apps_014",
+    "category": "practical_applications",
+    "difficulty": "intermediate",
+    "question": "What is 'generative AI'?",
+    "options": [
+      "AI that creates new original content",
+      "AI that analyzes data",
+      "AI that classifies inputs",
+      "AI that processes transactions"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Generative AI creates new content that didn't exist before - powering tools like ChatGPT, DALL-E, and music generators."
+  },
+  {
+    "id": "apps_015",
+    "category": "practical_applications",
+    "difficulty": "advanced",
+    "question": "What can AI-assisted code review detect?",
+    "options": [
+      "Only syntax errors",
+      "Bugs, security issues, and style problems",
+      "Only formatting issues",
+      "Only performance problems"
+    ],
+    "correctAnswer": 1,
+    "explanation": "AI code review tools scan code for potential bugs, security vulnerabilities, style issues, and suggest improvements automatically."
+  },
+  {
+    "id": "apps_016",
+    "category": "practical_applications",
+    "difficulty": "intermediate",
+    "question": "What does AI summarization do?",
+    "options": [
+      "Condenses long content to key points",
+      "Expands short text",
+      "Translates between languages",
+      "Corrects grammar errors"
+    ],
+    "correctAnswer": 0,
+    "explanation": "AI summarization extracts key information from long documents, articles, or meetings into concise summaries, saving time and effort."
+  },
+  {
+    "id": "apps_017",
+    "category": "practical_applications",
+    "difficulty": "intermediate",
+    "question": "What is text-to-speech (TTS)?",
+    "options": [
+      "Transcribing audio to text",
+      "Converting written text to spoken audio",
+      "Translating speech between languages",
+      "Recognizing voice commands"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Text-to-Speech (TTS) converts written text into spoken audio, powering audiobook narration, accessibility features, and voice assistants."
+  },
+  {
+    "id": "apps_018",
+    "category": "practical_applications",
+    "difficulty": "advanced",
+    "question": "How does AI improve A/B testing?",
+    "options": [
+      "Manually reviewing results",
+      "Only collecting more data",
+      "Simply randomizing users",
+      "Automatically optimizing experiments"
+    ],
+    "correctAnswer": 3,
+    "explanation": "AI enhances A/B testing by automatically identifying promising variants, optimizing traffic allocation, and finding statistical significance faster."
   }
 ]
