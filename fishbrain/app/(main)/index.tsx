@@ -78,20 +78,25 @@ export default function HomeScreen() {
       feedFish(currentQuestion.id, true);
     }
 
+    // Auto-advance to next question after eating animation
     setTimeout(() => {
       setIsEating(false);
+      setSelectedOption(null);
+      setHasAnswered(false);
+      setIsCorrect(false);
+      selectNewQuestion();
     }, 1500);
   };
 
   const handleNextQuestion = () => {
-    setSelectedOption(null);
-    setHasAnswered(false);
-    setIsCorrect(false);
-
+    // Only used for wrong answers now
     if (!isCorrect && currentQuestion) {
       feedFish(currentQuestion.id, false);
     }
 
+    setSelectedOption(null);
+    setHasAnswered(false);
+    setIsCorrect(false);
     selectNewQuestion();
   };
 
@@ -141,21 +146,19 @@ export default function HomeScreen() {
           ))}
         </View>
 
-        {/* Button right after options */}
+        {/* Button - hide during correct answer animation */}
         {!hasAnswered ? (
           <Button
             title="Submit"
             onPress={handleSubmit}
             disabled={!selectedOption}
           />
-        ) : (
+        ) : !isCorrect ? (
           <Button
-            title="Next"
+            title="Try Again"
             onPress={handleNextQuestion}
-            variant={isCorrect ? 'success' : 'primary'}
-            disabled={isDropping || isEating}
           />
-        )}
+        ) : null}
       </View>
 
       {/* Fish Tank - Takes remaining space */}
